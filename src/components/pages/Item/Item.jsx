@@ -1,5 +1,5 @@
 import React from "react";
 
 export default function Item() {
-  return <div>Je suis la page Item !</div>;
+  return <main role="main">Je suis la page Item !</main>;
 }
