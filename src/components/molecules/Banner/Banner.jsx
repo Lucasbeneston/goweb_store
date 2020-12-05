@@ -7,7 +7,7 @@ import "./Banner.scss";
 export default function Banner() {
   return (
     <div className="banner" role="banner">
-      <a href="https://www.goweb.fr/" className="banner_message">
+      <a className="banner_message" href="https://www.goweb.fr/" hrefLang="fr">
         Découvrez le nouveau site internet de Goweb ! Entrez dans la famille !
       </a>
       <button className="banner_close" type="button">
