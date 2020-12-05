@@ -1,0 +1,21 @@
+.item {
+  width: 100%;
+
+  &_miniatures {
+    width: 100%;
+    display: flex;
+    gap: 2.5%;
+    padding: 2.5%;
+
+    &_img {
+      width: 23%;
+      background-color: grey;
+
+      & img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
