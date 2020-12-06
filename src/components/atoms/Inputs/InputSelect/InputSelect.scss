@@ -1,0 +1,35 @@
+.inputSelect {
+  width: 100%;
+
+  &_label {
+    width: 100%;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  &_select {
+    color: grey;
+    padding: 10px;
+    border: 1px solid grey;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &_optionsContainer {
+    // display: none;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border: 1px solid grey;
+
+    & button {
+      padding: 10px;
+      border: none;
+      text-align: left;
+      background-color: white;
+      border-bottom: 1px solid lightgray;
+    }
+  }
+}
