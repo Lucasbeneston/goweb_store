@@ -7,6 +7,9 @@ import "./ItemForm.scss";
 
 export default function ItemForm() {
   const [isOpen, setIsOpen] = useState({ color: false, size: false });
+  const [quantity, setQuantity] = useState(0);
+  // Créer un state qui récupère l'information sur la selection ou non des différents inputs color, size et number.
+  // Mettre "quantity" dans ce state sous forme d'objet
 
   return (
     <div className="itemForm">
@@ -36,7 +39,21 @@ export default function ItemForm() {
         <button className="itemForm_bottom_buttonAdd" type="button">
           Ajouter au panier
         </button>
-        <InputNumber id="selectQuantity" label="Quantité" defaultOption="0" />
+        <InputNumber
+          id="selectQuantity"
+          label="Quantité"
+          onClickIncrease={() => {
+            if (quantity < 100) {
+              setQuantity(quantity + 1);
+            }
+          }}
+          onClickDecrease={() => {
+            if (quantity > 0) {
+              setQuantity(quantity - 1);
+            }
+          }}
+          defaultOption={quantity}
+        />
       </div>
     </div>
   );
