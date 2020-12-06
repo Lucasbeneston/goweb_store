@@ -46,7 +46,7 @@ export default function InputNumber({
 InputNumber.propTypes = {
   id: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
-  defaultOption: PropTypes.string.isRequired,
+  defaultOption: PropTypes.number.isRequired,
   onClickIncrease: PropTypes.func.isRequired,
   onClickDecrease: PropTypes.func.isRequired,
 };

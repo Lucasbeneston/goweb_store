@@ -30,6 +30,7 @@
     justify-content: space-between;
     align-items: center;
     height: 35px;
+    cursor: pointer;
 
     &_arrow {
       height: 100%;
@@ -60,6 +61,7 @@
       text-align: left;
       background-color: white;
       border-bottom: 1px solid lightgray;
+      cursor: pointer;
     }
   }
 }
