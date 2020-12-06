@@ -5,17 +5,34 @@ import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
 
 import "./InputSelect.scss";
 
-export default function InputSelect({ id, label, defaultOption, array }) {
+export default function InputSelect({
+  id,
+  label,
+  onClickEvent,
+  isOpen,
+  defaultOption,
+  array,
+}) {
   return (
     <div className="inputSelect">
       <h3 className="inputSelect_label" htmlFor={id}>
         {label}
       </h3>
-      <div className="inputSelect_select" type="select" id={id}>
+      <div
+        className="inputSelect_select"
+        tabIndex={0}
+        role="button"
+        onClick={onClickEvent}
+        onKeyDown={onClickEvent}
+        type="select"
+        id={id}
+      >
         {defaultOption}
-        <FontAwesomeIcon icon={faCaretDown} />
+        <div className="inputSelect_select_arrow">
+          <FontAwesomeIcon icon={faCaretDown} />
+        </div>
       </div>
-      <div className="inputSelect_optionsContainer">
+      <div className={`inputSelect_optionsContainer ${isOpen}`}>
         <button type="button" value={null}>
           -- {defaultOption} --
         </button>
@@ -29,9 +46,15 @@ export default function InputSelect({ id, label, defaultOption, array }) {
   );
 }
 
+InputSelect.defaultProps = {
+  isOpen: "",
+};
+
 InputSelect.propTypes = {
   id: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
+  onClickEvent: PropTypes.func.isRequired,
+  isOpen: PropTypes.string,
   defaultOption: PropTypes.string.isRequired,
   array: PropTypes.arrayOf(PropTypes.string).isRequired,
 };

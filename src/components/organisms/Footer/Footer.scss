@@ -1,8 +1,14 @@
+@import "../../_settings/variables";
+
 .footer {
   font-size: 1.3rem;
-  color: rgb(181, 181, 181);
+  color: $anthracite-grey;
   line-height: 1.6;
-  border-top: 1px solid rgb(181, 181, 181);
+  border-top: 1px solid $anthracite-grey;
   text-align: center;
   padding: 10px 15%;
+
+  & svg {
+    color: $goweb-red;
+  }
 }
