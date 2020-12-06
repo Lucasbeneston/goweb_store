@@ -16,6 +16,13 @@
       background-color: $grey;
       color: white;
       border: none;
+      text-transform: uppercase;
+      outline: none;
+
+      &.disabled {
+        background-color: lightgray;
+        cursor: not-allowed;
+      }
     }
   }
 }

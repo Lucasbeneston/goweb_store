@@ -10,7 +10,9 @@ export default function InputSelect({
   label,
   onClickEvent,
   isOpen,
+  selectedOption,
   defaultOption,
+  onClickOption,
   array,
 }) {
   return (
@@ -27,17 +29,22 @@ export default function InputSelect({
         type="select"
         id={id}
       >
-        {defaultOption}
+        {selectedOption}
         <div className="inputSelect_select_arrow">
           <FontAwesomeIcon icon={faCaretDown} />
         </div>
       </div>
       <div className={`inputSelect_optionsContainer ${isOpen}`}>
-        <button type="button" value={null}>
+        <button onClick={onClickOption} type="button" value={null}>
           -- {defaultOption} --
         </button>
         {array.map((option) => (
-          <button type="button" value={option} key={option}>
+          <button
+            onClick={onClickOption}
+            type="button"
+            value={option}
+            key={option}
+          >
             {option}
           </button>
         ))}
@@ -55,6 +62,8 @@ InputSelect.propTypes = {
   label: PropTypes.string.isRequired,
   onClickEvent: PropTypes.func.isRequired,
   isOpen: PropTypes.string,
+  selectedOption: PropTypes.string.isRequired,
+  onClickOption: PropTypes.func.isRequired,
   defaultOption: PropTypes.string.isRequired,
   array: PropTypes.arrayOf(PropTypes.string).isRequired,
 };

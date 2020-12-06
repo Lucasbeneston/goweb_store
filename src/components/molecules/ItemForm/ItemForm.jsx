@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Items from "../../../data/items";
 import InputSelect from "../../atoms/Inputs/InputSelect/InputSelect";
 import InputNumber from "../../atoms/Inputs/InputNumber/InputNumber";
@@ -6,37 +6,83 @@ import InputNumber from "../../atoms/Inputs/InputNumber/InputNumber";
 import "./ItemForm.scss";
 
 export default function ItemForm() {
-  const [isOpen, setIsOpen] = useState({ color: false, size: false });
-  const [quantity, setQuantity] = useState(0);
-  // Créer un state qui récupère l'information sur la selection ou non des différents inputs color, size et number.
-  // Mettre "quantity" dans ce state sous forme d'objet
+  const [isOpen, setIsOpen] = useState({ openColor: false, openSize: false });
+  const [isDisabled, setIsDisabled] = useState(true);
+  const [selectedValues, setSelectedValues] = useState({
+    color: null,
+    size: null,
+    quantity: 0,
+  });
+
+  const { color, size, quantity } = selectedValues;
+  const disabled = () => {
+    if (
+      color !== null &&
+      color !== "" &&
+      size !== null &&
+      size !== "" &&
+      quantity !== 0
+    ) {
+      setIsDisabled(false);
+    } else {
+      setIsDisabled(true);
+    }
+  };
+
+  useEffect(() => {
+    disabled();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [color, size, quantity]);
 
   return (
     <div className="itemForm">
       <InputSelect
         onClickEvent={() => {
-          setIsOpen({ ...isOpen, color: !isOpen.color });
+          setIsOpen({ ...isOpen, openColor: !isOpen.openColor });
         }}
-        isOpen={isOpen.color ? "show" : ""}
+        isOpen={isOpen.openColor ? "show" : ""}
+        onClickOption={(e) => {
+          setSelectedValues({
+            ...selectedValues,
+            color: e.target.value,
+          });
+        }}
         id="selectColor"
         label="Couleur"
+        selectedOption={color || "Choix couleur"}
         defaultOption="Choix couleur"
         array={Items.colors}
       />
 
       <InputSelect
         onClickEvent={() => {
-          setIsOpen({ ...isOpen, size: !isOpen.size });
+          setIsOpen({ ...isOpen, openSize: !isOpen.openSize });
         }}
-        isOpen={isOpen.size ? "show" : ""}
+        isOpen={isOpen.openSize ? "show" : ""}
+        onClickOption={(e) => {
+          setSelectedValues({
+            ...selectedValues,
+            size: e.target.value,
+          });
+        }}
         id="selectSize"
         label="Taille"
+        selectedOption={size || "Choix taille"}
         defaultOption="Choix taille"
         array={Items.sizes}
       />
 
       <div className="itemForm_bottom">
-        <button className="itemForm_bottom_buttonAdd" type="button">
+        <button
+          onClick={() => {
+            console.log("Je clique !");
+          }}
+          className={`itemForm_bottom_buttonAdd ${
+            isDisabled ? "disabled" : null
+          }`}
+          type="button"
+          disabled={isDisabled}
+        >
           Ajouter au panier
         </button>
         <InputNumber
@@ -44,12 +90,18 @@ export default function ItemForm() {
           label="Quantité"
           onClickIncrease={() => {
             if (quantity < 100) {
-              setQuantity(quantity + 1);
+              setSelectedValues({
+                ...selectedValues,
+                quantity: quantity + 1,
+              });
             }
           }}
           onClickDecrease={() => {
             if (quantity > 0) {
-              setQuantity(quantity - 1);
+              setSelectedValues({
+                ...selectedValues,
+                quantity: quantity - 1,
+              });
             }
           }}
           defaultOption={quantity}

@@ -21,6 +21,7 @@ export default function InputNumber({
         <span>{defaultOption}</span>
         <div className="inputNumber_value_arrows">
           <div
+            className="inputNumber_value_arrows_button"
             tabIndex={0}
             role="button"
             onClick={onClickIncrease}
@@ -30,6 +31,7 @@ export default function InputNumber({
           </div>
           <div className="inputNumber_value_line" />
           <div
+            className="inputNumber_value_arrows_button"
             tabIndex={0}
             role="button"
             onClick={onClickDecrease}
