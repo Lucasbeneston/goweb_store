@@ -1,7 +1,6 @@
 @import "../../../_settings/mixins";
 
 .inputNumber {
-  // width: 60px;
   width: fit-content;
 
   &_label {
@@ -43,7 +42,6 @@
       align-items: center;
       justify-content: center;
       border-left: 1px solid grey;
-      // background-color: rosybrown;
     }
 
     &_line {

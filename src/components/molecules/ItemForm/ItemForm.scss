@@ -1,0 +1,21 @@
+@import "../../_settings/variables";
+
+.itemForm {
+  padding: 2.5% 5%;
+
+  & > * {
+    margin-bottom: 20px;
+  }
+
+  &_bottom {
+    display: flex;
+
+    &_buttonAdd {
+      height: 35px;
+      width: 100%;
+      background-color: $grey;
+      color: white;
+      border: none;
+    }
+  }
+}
