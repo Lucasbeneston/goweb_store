@@ -19,6 +19,8 @@
     &_img {
       width: 23%;
       background-color: grey;
+      cursor: pointer;
+      outline: none;
 
       & img {
         width: 100%;

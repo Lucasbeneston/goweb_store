@@ -2,12 +2,14 @@
 // @import "../../_settings/mixins";
 
 .banner {
+  height: fit-content;
   padding: 10px 0;
   background-color: $goweb-red;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  opacity: 1;
 
   &.hidden {
     display: none;
@@ -29,5 +31,7 @@
     color: $white;
     background-color: transparent;
     border: none;
+    cursor: pointer;
+    outline: none;
   }
 }

@@ -2,7 +2,7 @@ const items = {
   id: 1,
   title: "Super manteau pour supporter le froid des Hauts-de-France",
   price: 499.0,
-  images: ["img-1.jpg", "img-2.jpg", "img-3.jpg", "img-4.jpg"],
+  images: ["img-4.jpg", "img-3.jpg", "img-2.jpg", "img-1.jpg"],
   disponibility: "En stock",
   reference: "#4657",
   tags: ["Fashion victim", "Classe", "Business"],

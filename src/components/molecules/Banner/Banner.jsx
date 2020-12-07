@@ -20,6 +20,7 @@ export default function Banner() {
 
   useEffect(() => {
     setHeaderHeight(document.querySelector(".header").offsetHeight);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [addToLocalStorage]);
 
   return (

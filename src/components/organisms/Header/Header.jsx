@@ -13,6 +13,7 @@ export default function Header() {
     const body = document.querySelector("body");
     body.style.marginTop = `${headerHeight}px`;
     setHeaderHeight(document.querySelector(".header").offsetHeight);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [headerHeight]);
 
   return (

@@ -2,7 +2,8 @@
 
 .nav {
   background-color: $off-white;
-  padding: 10px;
+  height: 50px;
+  padding: 0 10px;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -10,14 +11,57 @@
 
   &_right,
   &_left {
+    height: 100%;
     display: flex;
     align-items: center;
 
     &_button {
       font-size: 1.75rem;
-      padding: 5px 10px;
+      padding: 0 10px;
       border: none;
       background-color: transparent;
+      cursor: pointer;
+      outline: none;
+
+      &_burger {
+        width: 18px;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+
+  &_menu {
+    width: 100%;
+    position: absolute;
+    margin-top: 50px;
+    left: 0;
+    padding: 5% 7.5%;
+    display: flex;
+    // flex-direction: column;
+    flex-wrap: wrap;
+    background-color: $off-white;
+    border-bottom: 1px solid rgb(181, 181, 181);
+    transform: translateX(-100%);
+    transition: 0.5s ease-in-out;
+    opacity: 0;
+
+    &.open {
+      transform: translateX(0);
+      opacity: 1;
+    }
+
+    & a {
+      text-transform: uppercase;
+      font-size: 1.2rem;
+      width: 50%;
+      padding: 10px 0;
+
+      & svg {
+        margin: 0 5px;
+      }
     }
   }
 }
