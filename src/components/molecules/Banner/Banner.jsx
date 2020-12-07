@@ -1,16 +1,45 @@
-import React from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
+import HeaderContext from "../../../contexts/HeaderContext";
 
 import "./Banner.scss";
 
 export default function Banner() {
+  const context = useContext(HeaderContext);
+  const { setHeaderHeight } = context;
+
+  const [bannerInLocalStorage, setBannerInLocalStorage] = useState(
+    localStorage.getItem("banner")
+  );
+
+  const addToLocalStorage = () => {
+    localStorage.setItem("banner", true);
+    setBannerInLocalStorage(true);
+  };
+
+  useEffect(() => {
+    setHeaderHeight(document.querySelector(".header").offsetHeight);
+  }, [addToLocalStorage]);
+
   return (
-    <div className="banner" role="banner">
-      <a className="banner_message" href="https://www.goweb.fr/" hrefLang="fr">
+    <div
+      className={`banner ${bannerInLocalStorage ? "hidden" : null}`}
+      role="banner"
+    >
+      <a
+        className="banner_message"
+        href="https://www.goweb.fr/"
+        onClick={addToLocalStorage}
+        hrefLang="fr"
+      >
         Découvrez le nouveau site internet de Goweb ! Entrez dans la famille !
       </a>
-      <button className="banner_close" type="button">
+      <button
+        className="banner_close"
+        type="button"
+        onClick={addToLocalStorage}
+      >
         <FontAwesomeIcon icon={faTimes} />
       </button>
     </div>

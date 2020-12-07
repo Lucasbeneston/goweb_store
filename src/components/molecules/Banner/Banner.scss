@@ -9,6 +9,10 @@
   align-items: center;
   justify-content: center;
 
+  &.hidden {
+    display: none;
+  }
+
   &_message {
     font-size: 1rem;
     font-family: "Lato";
