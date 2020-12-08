@@ -1,6 +1,6 @@
 import React, { createContext, useReducer } from "react";
 import PropTypes from "prop-types";
-import CartReducer from "./CartReducer";
+import { CartReducer, sumItems } from "./CartReducer";
 
 export const CartContext = createContext();
 
@@ -10,7 +10,7 @@ const storage = localStorage.getItem("cart")
 
 const initialState = {
   cartItems: storage,
-  totalItems: 0, // Changer dynamiquement cette valeur
+  ...sumItems(storage),
 };
 
 export default function CartContextProvider({ children }) {
