@@ -5,7 +5,7 @@ const reducer = (state, action) => {
       return {
         ...state,
         cartItems: [...state.cartItems],
-        totalItems: state.cartItems,
+        totalItems: state.cartItems.length,
       };
 
     case "REMOVE_ITEM":
@@ -13,7 +13,7 @@ const reducer = (state, action) => {
       return {
         ...state,
         cartItems: [...state.cartItems],
-        totalItems: state.cartItems,
+        totalItems: state.cartItems.length,
       };
 
     case "CLEAR_CART":

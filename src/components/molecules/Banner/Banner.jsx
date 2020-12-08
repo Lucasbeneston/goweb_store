@@ -1,7 +1,7 @@
 import React, { useContext, useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
-import HeaderContext from "../../../contexts/HeaderContext";
+import HeaderContext from "../../../contexts/HeaderContext/HeaderContext";
 
 import "./Banner.scss";
 

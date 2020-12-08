@@ -1,14 +1,20 @@
-import React, { useState, useEffect } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import Items from "../../../data/items";
+import { CartContext } from "../../../contexts/CartContext/CartContext";
 import InputSelect from "../../atoms/Inputs/InputSelect/InputSelect";
 import InputNumber from "../../atoms/Inputs/InputNumber/InputNumber";
 
 import "./ItemForm.scss";
 
 export default function ItemForm() {
+  const { addItem, cartItems, totalItems } = useContext(CartContext);
+  console.log("cartItems : ", cartItems);
+  console.log("totalItems : ", totalItems);
+
   const [isOpen, setIsOpen] = useState({ openColor: false, openSize: false });
   const [isDisabled, setIsDisabled] = useState(true);
   const [selectedValues, setSelectedValues] = useState({
+    id: Items.id,
     title: Items.title,
     price: Items.price,
     color: null,
@@ -78,7 +84,7 @@ export default function ItemForm() {
       <div className="itemForm_bottom">
         <button
           onClick={() => {
-            console.log(selectedValues);
+            addItem(selectedValues);
           }}
           className={`itemForm_bottom_buttonAdd ${
             isDisabled ? "disabled" : null

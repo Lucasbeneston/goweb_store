@@ -1,13 +1,16 @@
-import React, { useReducer } from "react";
+import React, { createContext, useReducer } from "react";
 import PropTypes from "prop-types";
 import CartReducer from "./CartReducer";
-import CartContext from "./CartContext";
 
-// export const CartContext = createContext();
+export const CartContext = createContext();
+
+const storage = localStorage.getItem("cart")
+  ? JSON.parse(localStorage.getItem("cart"))
+  : [];
 
 const initialState = {
-  cartItems: [],
-  totalItems: 0,
+  cartItems: storage,
+  totalItems: 0, // Changer dynamiquement cette valeur
 };
 
 export default function CartContextProvider({ children }) {
