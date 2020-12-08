@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -9,11 +9,14 @@ import {
   faShoppingBag,
   faCaretDown,
 } from "@fortawesome/free-solid-svg-icons";
+import { CartContext } from "../../../contexts/CartContext/CartContext";
 // import LogoGoweb from "../../atoms/SVG/LogoGoweb";
 
 import "./Nav.scss";
 
 export default function Nav() {
+  const { itemCount } = useContext(CartContext);
+
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -48,6 +51,7 @@ export default function Nav() {
 
         <Link to="/cart" className="nav_right_button" type="button">
           <FontAwesomeIcon icon={faShoppingBag} />
+          <span className="nav_right_button_cartCount">{itemCount}</span>
         </Link>
       </div>
 

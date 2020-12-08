@@ -7,9 +7,7 @@ import InputNumber from "../../atoms/Inputs/InputNumber/InputNumber";
 import "./ItemForm.scss";
 
 export default function ItemForm() {
-  const { addItem, cartItems, totalItems } = useContext(CartContext);
-  console.log("cartItems : ", cartItems);
-  console.log("totalItems : ", totalItems);
+  const { addItem } = useContext(CartContext);
 
   const [isOpen, setIsOpen] = useState({ openColor: false, openSize: false });
   const [isDisabled, setIsDisabled] = useState(true);

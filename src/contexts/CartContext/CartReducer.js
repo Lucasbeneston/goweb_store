@@ -11,14 +11,8 @@ export const sumItems = (cartItems) => {
     (total, product) => total + product.quantity,
     0
   );
-
-  // const total = cartItems
-  //   // eslint-disable-next-line no-shadow
-  //   .reduce((total, product) => total + product.price * product.quantity, 0)
-  //   .toFixed(2);
   return {
     itemCount,
-    // total
   };
 };
 
