@@ -18,6 +18,8 @@ export default function ItemForm() {
     color: null,
     size: null,
     quantity: 0,
+    image: Items.images[0],
+    reference: Items.reference,
   });
 
   const { color, size, quantity } = selectedValues;

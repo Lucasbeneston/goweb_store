@@ -11,8 +11,13 @@ export const sumItems = (cartItems) => {
     (total, product) => total + product.quantity,
     0
   );
+  const itemTotalValue = cartItems.reduce(
+    (total, product) => total + product.price * product.quantity,
+    0
+  );
   return {
     itemCount,
+    itemTotalValue,
   };
 };
 
