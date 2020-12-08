@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { BrowserRouter as Router } from "react-router-dom";
+import HeaderContextProvider from "./contexts/HeaderContextProvider";
+import CartContextProvider from "./contexts/CartContext/CartContextProvider";
 
-import HeaderContext from "./contexts/HeaderContext";
 import Header from "./components/organisms/Header/Header";
 import Routes from "./components/Routes";
 import Footer from "./components/organisms/Footer/Footer";
@@ -9,23 +10,15 @@ import Footer from "./components/organisms/Footer/Footer";
 import "./App.scss";
 
 function App() {
-  const [headerHeight, setHeaderHeight] = useState();
-
-  useEffect(() => {
-    setHeaderHeight(document.querySelector(".header").offsetHeight);
-  }, []);
-
-  const contextHeader = {
-    headerHeight,
-    setHeaderHeight,
-  };
   return (
     <Router>
-      <HeaderContext.Provider value={contextHeader}>
-        <Header />
-        <Routes />
-        <Footer />
-      </HeaderContext.Provider>
+      <HeaderContextProvider>
+        <CartContextProvider>
+          <Header />
+          <Routes />
+          <Footer />
+        </CartContextProvider>
+      </HeaderContextProvider>
     </Router>
   );
 }

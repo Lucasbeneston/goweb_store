@@ -9,12 +9,15 @@ export default function ItemForm() {
   const [isOpen, setIsOpen] = useState({ openColor: false, openSize: false });
   const [isDisabled, setIsDisabled] = useState(true);
   const [selectedValues, setSelectedValues] = useState({
+    title: Items.title,
+    price: Items.price,
     color: null,
     size: null,
     quantity: 0,
   });
 
   const { color, size, quantity } = selectedValues;
+
   const disabled = () => {
     if (
       color !== null &&
@@ -75,7 +78,7 @@ export default function ItemForm() {
       <div className="itemForm_bottom">
         <button
           onClick={() => {
-            console.log("Je clique !");
+            console.log(selectedValues);
           }}
           className={`itemForm_bottom_buttonAdd ${
             isDisabled ? "disabled" : null

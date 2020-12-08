@@ -15,7 +15,6 @@ import "./Nav.scss";
 
 export default function Nav() {
   const [isOpen, setIsOpen] = useState(false);
-  console.log(isOpen);
 
   return (
     <nav className="nav" role="navigation">
@@ -35,7 +34,7 @@ export default function Nav() {
             )}
           </div>
         </button>
-        <h1>Goweb.</h1>
+        <h1 className="nav_left_logo">Goweb.</h1>
         {/* <div className="nav_logo"><LogoGoweb /></div> */}
       </div>
 
@@ -51,17 +50,56 @@ export default function Nav() {
           <FontAwesomeIcon icon={faShoppingBag} />
         </Link>
       </div>
+
       <div className={`nav_menu ${isOpen ? "open" : null}`}>
-        <Link to="/home">Home</Link>
-        <Link to="/homme">
+        <Link
+          to="/"
+          onClick={() => {
+            setIsOpen(!isOpen);
+          }}
+        >
+          Home
+        </Link>
+        <Link
+          to="/homme"
+          onClick={() => {
+            setIsOpen(!isOpen);
+          }}
+        >
           Homme <FontAwesomeIcon icon={faCaretDown} />
         </Link>
-        <Link to="/femme">
+        <Link
+          to="/femme"
+          onClick={() => {
+            setIsOpen(!isOpen);
+          }}
+        >
           Femme <FontAwesomeIcon icon={faCaretDown} />
         </Link>
-        <Link to="/maison">Maison</Link>
-        <Link to="/jardin">Jardin</Link>
-        <Link to="/blog">Blog</Link>
+        <Link
+          to="/maison"
+          onClick={() => {
+            setIsOpen(!isOpen);
+          }}
+        >
+          Maison
+        </Link>
+        <Link
+          to="/jardin"
+          onClick={() => {
+            setIsOpen(!isOpen);
+          }}
+        >
+          Jardin
+        </Link>
+        <Link
+          to="/blog"
+          onClick={() => {
+            setIsOpen(!isOpen);
+          }}
+        >
+          Blog
+        </Link>
       </div>
     </nav>
   );

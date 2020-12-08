@@ -10,11 +10,11 @@ export default function Banner() {
   const { setHeaderHeight } = context;
 
   const [bannerInLocalStorage, setBannerInLocalStorage] = useState(
-    localStorage.getItem("banner")
+    sessionStorage.getItem("banner")
   );
 
   const addToLocalStorage = () => {
-    localStorage.setItem("banner", true);
+    sessionStorage.setItem("banner", true);
     setBannerInLocalStorage(true);
   };
 
