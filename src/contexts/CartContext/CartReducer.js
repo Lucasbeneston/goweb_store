@@ -26,9 +26,10 @@ export const CartReducer = (state, action) => {
   switch (action.type) {
     case "ADD_ITEM":
       if (
-        // !state.cartItems.find((item) => item.id === action.item.id) &&
-        !state.cartItems.find((item) => item.size === action.item.size) ||
-        !state.cartItems.find((item) => item.color === action.item.color)
+        !state.cartItems.find(
+          (item) =>
+            item.size === action.item.size && item.color === action.item.color
+        )
       ) {
         state.cartItems.push({
           ...action.item,

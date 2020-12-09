@@ -1,0 +1,55 @@
+.shoppingCartItem {
+  width: 100%;
+  padding: 5% 0;
+  display: flex;
+  border-bottom: 1px solid rgb(199, 199, 199);
+
+  &_illustration {
+    width: 25%;
+    height: 100px;
+    object-fit: cover;
+  }
+
+  &_informations {
+    width: 75%;
+    padding: 5px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 1.2rem;
+
+    &_top {
+      width: 90%;
+
+      &_title {
+        text-transform: uppercase;
+        font-weight: bolder;
+        display: inline-block;
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      &_colorRef {
+        text-transform: uppercase;
+
+        & span {
+          text-transform: initial;
+          font-weight: lighter;
+        }
+      }
+    }
+
+    &_bottom {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+
+      &_size,
+      &_price {
+        font-weight: bolder;
+      }
+    }
+  }
+}
