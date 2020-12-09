@@ -1,3 +1,4 @@
+@import "../../../_settings/variables";
 @import "../../../_settings/mixins";
 
 .inputNumber {
@@ -23,8 +24,8 @@
   }
 
   &_value {
-    color: grey;
-    border: 1px solid grey;
+    color: $grey;
+    border: 1px solid $grey;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -41,7 +42,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      border-left: 1px solid grey;
+      border-left: 1px solid $grey;
 
       &_button {
         cursor: pointer;
@@ -50,7 +51,7 @@
     }
 
     &_line {
-      border-bottom: 1px solid grey;
+      border-bottom: 1px solid $grey;
       width: 100%;
     }
   }

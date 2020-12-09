@@ -10,7 +10,6 @@ import {
   faCaretDown,
 } from "@fortawesome/free-solid-svg-icons";
 import { CartContext } from "../../../contexts/CartContext/CartContext";
-// import LogoGoweb from "../../atoms/SVG/LogoGoweb";
 
 import "./Nav.scss";
 
@@ -40,8 +39,12 @@ export default function Nav() {
           </div>
         </button>
         <Link to="/">
-          <h1 className="nav_left_logo">Goweb.</h1>{" "}
-          {/* <div className="nav_logo"><LogoGoweb /></div> */}
+          <div className="nav_logo">
+            <img
+              src={`${process.env.PUBLIC_URL}/assets/logoSVGgoweb.png`}
+              alt="Illustration du manteau"
+            />
+          </div>
         </Link>
       </div>
 
