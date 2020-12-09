@@ -19,15 +19,17 @@ export default function Nav() {
 
   const [isOpen, setIsOpen] = useState(false);
 
+  const clickOpenClose = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <nav className="nav" role="navigation">
       <div className="nav_left">
         <button
           className="nav_left_button"
           type="button"
-          onClick={() => {
-            setIsOpen(!isOpen);
-          }}
+          onClick={clickOpenClose}
         >
           <div className="nav_left_button_burger">
             {!isOpen ? (
@@ -37,8 +39,10 @@ export default function Nav() {
             )}
           </div>
         </button>
-        <h1 className="nav_left_logo">Goweb.</h1>
-        {/* <div className="nav_logo"><LogoGoweb /></div> */}
+        <Link to="/">
+          <h1 className="nav_left_logo">Goweb.</h1>{" "}
+          {/* <div className="nav_logo"><LogoGoweb /></div> */}
+        </Link>
       </div>
 
       <div className="nav_right">
@@ -56,52 +60,22 @@ export default function Nav() {
       </div>
 
       <div className={`nav_menu ${isOpen ? "open" : null}`}>
-        <Link
-          to="/"
-          onClick={() => {
-            setIsOpen(!isOpen);
-          }}
-        >
+        <Link to="/" onClick={clickOpenClose}>
           Home
         </Link>
-        <Link
-          to="/homme"
-          onClick={() => {
-            setIsOpen(!isOpen);
-          }}
-        >
+        <Link to="/homme" onClick={clickOpenClose}>
           Homme <FontAwesomeIcon icon={faCaretDown} />
         </Link>
-        <Link
-          to="/femme"
-          onClick={() => {
-            setIsOpen(!isOpen);
-          }}
-        >
+        <Link to="/femme" onClick={clickOpenClose}>
           Femme <FontAwesomeIcon icon={faCaretDown} />
         </Link>
-        <Link
-          to="/maison"
-          onClick={() => {
-            setIsOpen(!isOpen);
-          }}
-        >
+        <Link to="/maison" onClick={clickOpenClose}>
           Maison
         </Link>
-        <Link
-          to="/jardin"
-          onClick={() => {
-            setIsOpen(!isOpen);
-          }}
-        >
+        <Link to="/jardin" onClick={clickOpenClose}>
           Jardin
         </Link>
-        <Link
-          to="/blog"
-          onClick={() => {
-            setIsOpen(!isOpen);
-          }}
-        >
+        <Link to="/blog" onClick={clickOpenClose}>
           Blog
         </Link>
       </div>
