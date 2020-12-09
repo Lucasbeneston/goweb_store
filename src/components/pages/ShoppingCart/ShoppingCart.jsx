@@ -7,7 +7,6 @@ import "./ShoppingCart.scss";
 
 export default function ShoppingCart() {
   const { cartItems, itemTotalValue, itemCount } = useContext(CartContext);
-  console.log(typeof cartItems);
 
   return (
     <div className="shoppingCart">
@@ -18,6 +17,7 @@ export default function ShoppingCart() {
         <>
           {cartItems.map((item) => (
             <ShoppingCartItem
+              key={item.id}
               item={item}
               itemImage={item.image}
               itemTitle={item.title}
