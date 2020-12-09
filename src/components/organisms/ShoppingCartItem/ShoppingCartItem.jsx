@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import PropTypes from "prop-types";
+import { CartContext } from "../../../contexts/CartContext/CartContext";
+
 import "./ShoppingCartItem.scss";
 
 export default function ShoppingCartItem({
+  item,
   itemImage,
   itemTitle,
   itemColor,
@@ -11,6 +14,8 @@ export default function ShoppingCartItem({
   itemSize,
   itemPrice,
 }) {
+  const { removeItem } = useContext(CartContext);
+
   return (
     <div className="shoppingCartItem">
       <img
@@ -19,6 +24,14 @@ export default function ShoppingCartItem({
         alt="Illustration du manteau"
       />
       <div className="shoppingCartItem_informations">
+        <button
+          onClick={() => {
+            removeItem(item);
+          }}
+          type="button"
+        >
+          delete
+        </button>
         <div className="shoppingCartItem_informations_top">
           <h2 className="shoppingCartItem_informations_top_title">
             {itemTitle}
@@ -42,7 +55,12 @@ export default function ShoppingCartItem({
   );
 }
 
+ShoppingCartItem.defaultProps = {
+  item: null,
+};
+
 ShoppingCartItem.propTypes = {
+  item: PropTypes.objectOf(PropTypes.string, PropTypes.number),
   itemImage: PropTypes.string.isRequired,
   itemTitle: PropTypes.string.isRequired,
   itemColor: PropTypes.string.isRequired,

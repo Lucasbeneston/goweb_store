@@ -23,6 +23,6 @@ export default function ShoppingCartTotal({ itemTotalValue, itemCount }) {
 }
 
 ShoppingCartTotal.propTypes = {
-  itemTotalValue: PropTypes.string.isRequired,
-  itemCount: PropTypes.string.isRequired,
+  itemTotalValue: PropTypes.number.isRequired,
+  itemCount: PropTypes.number.isRequired,
 };

@@ -21,7 +21,7 @@ export default function CartContextProvider({ children }) {
   };
 
   const removeItem = (item) => {
-    dispatch({ type: "ADD_ITEM", item });
+    dispatch({ type: "REMOVE_ITEM", item });
   };
 
   const contextValues = {

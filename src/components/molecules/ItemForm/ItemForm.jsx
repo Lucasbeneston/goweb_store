@@ -12,7 +12,7 @@ export default function ItemForm() {
   const [isOpen, setIsOpen] = useState({ openColor: false, openSize: false });
   const [isDisabled, setIsDisabled] = useState(true);
   const [selectedValues, setSelectedValues] = useState({
-    id: Items.id,
+    id: null,
     title: Items.title,
     price: Items.price,
     color: null,
@@ -33,6 +33,12 @@ export default function ItemForm() {
       quantity !== 0
     ) {
       setIsDisabled(false);
+      setSelectedValues({
+        ...selectedValues,
+        id: `${selectedValues.size}${selectedValues.quantity}${selectedValues.color}`
+          .replace(" ", "")
+          .toLocaleLowerCase(),
+      });
     } else {
       setIsDisabled(true);
     }

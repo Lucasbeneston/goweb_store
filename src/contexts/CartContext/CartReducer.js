@@ -43,13 +43,16 @@ export const CartReducer = (state, action) => {
         cartItems: [...state.cartItems],
       };
 
-    // case "REMOVE_ITEM":
-    //   localStorage.removeItem("cart", JSON.stringify(action.item));
-    //   return {
-    //     ...state,
-    //     cartItems: [...state.cartItems],
-    //     totalItems: state.cartItems.length,
-    //   };
+    case "REMOVE_ITEM":
+      return {
+        ...state,
+        ...sumItems(
+          state.cartItems.filter((item) => item.id !== action.item.id)
+        ),
+        cartItems: [
+          ...state.cartItems.filter((item) => item.id !== action.item.id),
+        ],
+      };
 
     // case "CLEAR_CART":
     //   localStorage.clear();

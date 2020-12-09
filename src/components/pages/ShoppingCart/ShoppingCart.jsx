@@ -13,6 +13,7 @@ export default function ShoppingCart() {
       <h1 className="shoppingCart_title">Panier</h1>
       {cartItems.map((item) => (
         <ShoppingCartItem
+          item={item}
           itemImage={item.image}
           itemTitle={item.title}
           itemColor={item.color}

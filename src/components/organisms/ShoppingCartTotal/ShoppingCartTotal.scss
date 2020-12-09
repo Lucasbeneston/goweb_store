@@ -1,8 +1,10 @@
+@import "../../_settings/variables";
+
 .shoppingCartTotal {
   width: 100%;
   padding: 0 5%;
   margin: 5% 0;
-  background-color: rgb(236, 236, 236);
+  background-color: $extra-light-grey;
   font-size: 1.1rem;
   text-transform: uppercase;
 
@@ -12,14 +14,14 @@
     display: flex;
     justify-content: space-between;
     margin: 5% 0;
-    color: rgb(83, 83, 83);
+    color: $grey;
   }
 
   &_toPay {
     & h2 {
       font-size: 1.4rem;
       font-weight: bold;
-      color: black;
+      color: $black;
     }
   }
 }
