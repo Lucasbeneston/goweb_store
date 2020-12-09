@@ -24,14 +24,20 @@ export default function ShoppingCartItem({
         alt="Illustration du manteau"
       />
       <div className="shoppingCartItem_informations">
-        <button
+        <div
+          className="shoppingCartItem_informations_removeItem"
+          tabIndex={0}
+          role="button"
           onClick={() => {
+            removeItem(item);
+          }}
+          onKeyDown={() => {
             removeItem(item);
           }}
           type="button"
         >
-          delete
-        </button>
+          &times;
+        </div>
         <div className="shoppingCartItem_informations_top">
           <h2 className="shoppingCartItem_informations_top_title">
             {itemTitle}

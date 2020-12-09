@@ -19,6 +19,14 @@
     flex-direction: column;
     justify-content: space-between;
     font-size: 1.2rem;
+    position: relative;
+
+    &_removeItem {
+      width: fit-content;
+      position: absolute;
+      right: 15px;
+      top: 5px;
+    }
 
     &_top {
       width: 90%;
