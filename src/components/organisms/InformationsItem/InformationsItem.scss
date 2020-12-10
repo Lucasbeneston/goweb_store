@@ -27,6 +27,13 @@
     font-size: 1.6rem;
     line-height: 1.6;
     margin-bottom: 30px;
+
+    &_inStock {
+      color: green;
+    }
+    &_soldOut {
+      color: red;
+    }
   }
 
   &_description {

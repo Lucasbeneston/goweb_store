@@ -17,7 +17,7 @@ export default function ItemForm() {
     price: Items.price,
     color: null,
     size: null,
-    quantity: 0,
+    quantity: 1,
     image: Items.images[0],
     reference: Items.reference,
   });
@@ -25,13 +25,7 @@ export default function ItemForm() {
   const { color, size, quantity } = selectedValues;
 
   const disabled = () => {
-    if (
-      color !== null &&
-      color !== "" &&
-      size !== null &&
-      size !== "" &&
-      quantity !== 0
-    ) {
+    if (color !== null && color !== "" && size !== null && size !== "") {
       setIsDisabled(false);
       setSelectedValues({
         ...selectedValues,
@@ -112,7 +106,7 @@ export default function ItemForm() {
             }
           }}
           onClickDecrease={() => {
-            if (quantity > 0) {
+            if (quantity > 1) {
               setSelectedValues({
                 ...selectedValues,
                 quantity: quantity - 1,

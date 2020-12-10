@@ -31,7 +31,16 @@ export default function InformationsItem() {
       <h3 className="informationsItem_price">{Items.price}.00€</h3>
 
       <div className="informationsItem_logistic">
-        <h4>Disponibilité : {Items.disponibility}</h4>
+        <h4>
+          Disponibilité :{" "}
+          <span
+            className={`informationsItem_logistic_${
+              Items.disponibility === "En stock" ? "inStock" : "soldOut"
+            }`}
+          >
+            {Items.disponibility} &#9679;
+          </span>
+        </h4>
         <h4>Référence : {Items.reference}</h4>
         <h4>Tags : {Items.tags.map((tag) => tag).join(", ")}</h4>
       </div>
