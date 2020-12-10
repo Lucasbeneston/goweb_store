@@ -16,6 +16,11 @@
     display: none;
   }
 
+  &_emptyCart {
+    width: 100%;
+    text-align: center;
+  }
+
   &_lastItem {
     padding: 0 0 15px 0;
     border-bottom: 1px solid $light-grey;
