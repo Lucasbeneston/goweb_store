@@ -1,12 +1,16 @@
 import React from "react";
 import Items from "../../../data/items";
+import LikeBorder from "../../atoms/SVG/LikeSVG/LikeBorder";
 
 import "./InformationsItem.scss";
 
 export default function InformationsItem() {
   return (
     <section className="informationsItem">
-      <h2 className="informationsItem_title">{Items.title}</h2>
+      <div className="informationsItem_title">
+        <h2>{Items.title}</h2>
+        <LikeBorder />
+      </div>
 
       <h3 className="informationsItem_price">{Items.price}.00€</h3>
 
