@@ -2,6 +2,7 @@ import React, { useContext, useEffect } from "react";
 import HeaderContext from "../../../contexts/HeaderContext/HeaderContext";
 import Banner from "../../molecules/Banner/Banner";
 import Nav from "../../molecules/Nav/Nav";
+import PreviewShoppingCart from "../PreviewShoppingCart/PreviewShoppingCart";
 
 import "./Header.scss";
 
@@ -20,6 +21,7 @@ export default function Header() {
     <header className="header">
       <Banner />
       <Nav />
+      <PreviewShoppingCart />
     </header>
   );
 }
