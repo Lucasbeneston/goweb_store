@@ -12,6 +12,10 @@
     & h2 {
       width: auto;
     }
+
+    &_favoriteButton {
+      outline: none;
+    }
   }
 
   &_price {

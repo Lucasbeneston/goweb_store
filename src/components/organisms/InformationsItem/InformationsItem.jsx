@@ -1,15 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 import Items from "../../../data/items";
+
 import LikeBorder from "../../atoms/SVG/LikeSVG/LikeBorder";
+import LikeFull from "../../atoms/SVG/LikeSVG/LikeFull";
 
 import "./InformationsItem.scss";
 
 export default function InformationsItem() {
+  const [isFavorite, setIsFavorite] = useState(false);
+
+  const switchFavorite = () => {
+    setIsFavorite(!isFavorite);
+  };
+
   return (
     <section className="informationsItem">
       <div className="informationsItem_title">
         <h2>{Items.title}</h2>
-        <LikeBorder />
+        <div
+          className="informationsItem_title_favoriteButton"
+          tabIndex={0}
+          role="button"
+          onKeyDown={switchFavorite}
+          onClick={switchFavorite}
+        >
+          {!isFavorite ? <LikeBorder /> : <LikeFull />}
+        </div>
       </div>
 
       <h3 className="informationsItem_price">{Items.price}.00€</h3>
