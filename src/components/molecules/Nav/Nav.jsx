@@ -21,7 +21,11 @@ export default function Nav() {
 
   return (
     <nav className="nav" role="navigation">
-      {isMobile ? <NavMobile itemCount={itemCount} /> : <NavDesktop />}
+      {isMobile ? (
+        <NavMobile itemCount={itemCount} />
+      ) : (
+        <NavDesktop itemCount={itemCount} />
+      )}
     </nav>
   );
 }
