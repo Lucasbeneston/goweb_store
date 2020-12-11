@@ -19,7 +19,7 @@
   }
   &_illustration {
     width: 100%;
-    max-height: 100vw;
+    height: 100vw;
 
     @include media(tablet) {
       height: 70vh;
