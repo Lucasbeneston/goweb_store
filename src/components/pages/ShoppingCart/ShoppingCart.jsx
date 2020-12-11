@@ -32,6 +32,7 @@ export default function ShoppingCart() {
             itemTotalValue={itemTotalValue}
             itemCount={itemCount}
           />
+
           <button className="shoppingCart_buttonNext" type="button">
             Continuer
           </button>

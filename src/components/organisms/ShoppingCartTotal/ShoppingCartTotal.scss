@@ -1,19 +1,25 @@
 @import "../../_settings/variables";
+@import "../../_settings/mixins";
 
 .shoppingCartTotal {
   width: 100%;
-  padding: 0 5%;
+  padding: 5px 5%;
   margin: 5% 0;
   background-color: $extra-light-grey;
   font-size: 1.1rem;
   text-transform: uppercase;
+
+  @include media(tablet) {
+    margin: 20px 0;
+    padding: 10px 20px;
+  }
 
   &_articles,
   &_delivery,
   &_toPay {
     display: flex;
     justify-content: space-between;
-    margin: 5% 0;
+    padding: 10px 0;
     color: $grey;
   }
 

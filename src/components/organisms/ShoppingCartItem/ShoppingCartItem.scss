@@ -1,4 +1,5 @@
 @import "../../_settings/variables";
+@import "../../_settings/mixins";
 
 .shoppingCartItem {
   width: 100%;
@@ -6,10 +7,18 @@
   display: flex;
   border-bottom: 1px solid $light-grey;
 
+  @include media(tablet) {
+    padding: 20px 0;
+  }
+
   &_illustration {
     width: 25%;
     height: 100px;
     object-fit: cover;
+
+    @include media(tablet) {
+      height: 200px;
+    }
   }
 
   &_informations {

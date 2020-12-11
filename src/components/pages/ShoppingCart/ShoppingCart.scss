@@ -10,7 +10,7 @@
   min-height: calc(100vh - 50px);
 
   @include media(tablet) {
-    padding: 0 10%;
+    padding: 0 25%;
   }
 
   &_title {
@@ -20,6 +20,10 @@
     border-bottom: 1px solid $grey;
     width: fit-content;
     padding-bottom: 5px;
+
+    @include media(tablet) {
+      margin-top: 40px;
+    }
   }
 
   &_emptyCart {

@@ -21,7 +21,7 @@ export default function ShoppingCartItem({
       <img
         className="shoppingCartItem_illustration"
         src={`${process.env.PUBLIC_URL}/assets/${itemImage}`}
-        alt="Illustration du manteau"
+        alt={`Illustration de ${itemTitle}`}
       />
       <div className="shoppingCartItem_informations">
         <div

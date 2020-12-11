@@ -1,6 +1,9 @@
 @import "../../../_settings/variables";
 
 .navMobile {
+  width: 100%;
+  background-color: $off-white;
+
   &_logo {
     display: flex;
     justify-content: center;
