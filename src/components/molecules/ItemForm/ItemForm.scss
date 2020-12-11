@@ -1,7 +1,12 @@
 @import "../../_settings/variables";
+@import "../../_settings/mixins";
 
 .itemForm {
   padding: 2.5% 5%;
+
+  @include media(tablet) {
+    padding: 2.5% 0 2.5% 5%;
+  }
 
   & > * {
     margin-bottom: 20px;
