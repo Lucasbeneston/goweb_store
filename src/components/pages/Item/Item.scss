@@ -8,14 +8,14 @@
 
   @include media(tablet) {
     flex-direction: row;
-    padding: 0 10%;
+    padding: 40px 10%;
 
     &_images {
-      width: 60%;
+      width: 55%;
     }
 
     &_informationsForm {
-      width: 40%;
+      width: 45%;
     }
   }
 }
