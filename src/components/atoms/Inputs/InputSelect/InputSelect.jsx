@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
+import { faCaretDown, faCaretUp } from "@fortawesome/free-solid-svg-icons";
 
 import "./InputSelect.scss";
 
@@ -31,7 +31,11 @@ export default function InputSelect({
       >
         {selectedOption}
         <div className="inputSelect_select_arrow">
-          <FontAwesomeIcon icon={faCaretDown} />
+          {isOpen === "show" ? (
+            <FontAwesomeIcon icon={faCaretUp} />
+          ) : (
+            <FontAwesomeIcon icon={faCaretDown} />
+          )}
         </div>
       </div>
       <div className={`inputSelect_optionsContainer ${isOpen}`}>

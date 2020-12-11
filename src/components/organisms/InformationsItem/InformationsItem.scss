@@ -1,3 +1,5 @@
+@import "../../_settings/variables";
+
 .informationsItem {
   padding: 5%;
 
@@ -29,10 +31,10 @@
     margin-bottom: 30px;
 
     &_inStock {
-      color: green;
+      color: $green;
     }
     &_soldOut {
-      color: red;
+      color: $goweb-red;
     }
   }
 
