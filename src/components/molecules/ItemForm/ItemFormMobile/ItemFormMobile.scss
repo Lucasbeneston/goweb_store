@@ -1,0 +1,20 @@
+@import "../../../_settings/variables";
+
+.itemFormMobile_bottom {
+  display: flex;
+
+  &_buttonAdd {
+    height: 35px;
+    width: 100%;
+    background-color: $grey;
+    color: white;
+    border: none;
+    text-transform: uppercase;
+    outline: none;
+
+    &.disabled {
+      background-color: darkgray;
+      cursor: not-allowed;
+    }
+  }
+}
