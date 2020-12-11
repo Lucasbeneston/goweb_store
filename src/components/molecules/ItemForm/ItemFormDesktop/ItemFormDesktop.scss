@@ -1,0 +1,46 @@
+@import "../../../_settings/variables";
+
+.itemFormDesktop {
+  width: 100%;
+
+  &_inputs {
+    width: 100%;
+    display: flex;
+  }
+
+  &_buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    &_buttonAddCart {
+      width: 47.5%;
+      height: 45px;
+      background-color: $grey;
+      color: white;
+      border: none;
+      text-transform: uppercase;
+      outline: none;
+      font-size: 1.2rem;
+      cursor: pointer;
+
+      &.disabled {
+        background-color: darkgray;
+        cursor: not-allowed;
+      }
+    }
+
+    &_buttonAddFavorite {
+      width: 47.5%;
+      height: 45px;
+      background-color: $off-white;
+      color: $grey;
+      border: none;
+      text-transform: uppercase;
+      outline: none;
+      border: 1px solid $light-grey;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+  }
+}

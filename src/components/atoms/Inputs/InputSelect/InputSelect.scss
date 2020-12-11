@@ -4,6 +4,10 @@
 .inputSelect {
   width: 100%;
 
+  @include media(tablet) {
+    margin-right: 7.5%;
+  }
+
   &_label {
     position: absolute;
     clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
@@ -19,7 +23,7 @@
       height: auto;
       font-size: 1.6rem;
       text-transform: uppercase;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
     }
   }
 

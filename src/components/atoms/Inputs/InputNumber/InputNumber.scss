@@ -5,7 +5,7 @@
   width: fit-content;
 
   &_label {
-    position: absolute !important;
+    position: absolute;
     clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
     clip: rect(1px, 1px, 1px, 1px);
     height: 1px;
@@ -19,7 +19,7 @@
       height: auto;
       font-size: 1.6rem;
       text-transform: uppercase;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
     }
   }
 
