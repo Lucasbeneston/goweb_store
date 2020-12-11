@@ -1,4 +1,8 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAngleLeft } from "@fortawesome/free-solid-svg-icons";
+
 import Items from "../../../data/items";
 
 import "./CarouselImages.scss";
@@ -10,6 +14,12 @@ export default function CarrouselImages() {
 
   return (
     <>
+      <Link to="/">
+        <div className="carouselImages_return">
+          <FontAwesomeIcon icon={faAngleLeft} />
+          <span>Retour</span>
+        </div>
+      </Link>
       <div className="carouselImages_illustration">
         <img
           src={`${process.env.PUBLIC_URL}/${selectedImage}`}

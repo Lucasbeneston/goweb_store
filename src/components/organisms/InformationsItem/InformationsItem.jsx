@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAngleLeft } from "@fortawesome/free-solid-svg-icons";
 import Items from "../../../data/items";
-
 import LikeBorder from "../../atoms/SVG/LikeSVG/LikeBorder";
 import LikeFull from "../../atoms/SVG/LikeSVG/LikeFull";
 
@@ -15,6 +17,12 @@ export default function InformationsItem() {
 
   return (
     <section className="informationsItem">
+      <Link to="/">
+        <div className="informationsItem_return">
+          <FontAwesomeIcon icon={faAngleLeft} />
+          <span>Retour</span>
+        </div>
+      </Link>
       <div className="informationsItem_title">
         <h2>{Items.title}</h2>
         <div
