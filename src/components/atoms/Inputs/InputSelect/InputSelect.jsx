@@ -39,11 +39,17 @@ export default function InputSelect({
         </div>
       </div>
       <div className={`inputSelect_optionsContainer ${isOpen}`}>
-        <button onClick={onClickOption} type="button" value={null}>
+        <button
+          className="inputSelect_optionsContainer_option"
+          onClick={onClickOption}
+          type="button"
+          value={null}
+        >
           -- {defaultOption} --
         </button>
         {array.map((option) => (
           <button
+            className="inputSelect_optionsContainer_option"
             onClick={onClickOption}
             type="button"
             value={option}

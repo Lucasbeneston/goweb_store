@@ -85,5 +85,5 @@ export default function NavMobile({ itemCount }) {
 }
 
 NavMobile.propTypes = {
-  itemCount: PropTypes.string.isRequired,
+  itemCount: PropTypes.number.isRequired,
 };

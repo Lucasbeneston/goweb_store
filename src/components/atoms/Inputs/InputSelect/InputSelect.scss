@@ -65,7 +65,7 @@
       border: 1px solid $grey;
     }
 
-    & button {
+    &_option {
       height: 35px;
       padding-left: 10px;
       border: none;
@@ -74,6 +74,16 @@
       border-bottom: 1px solid $light-grey;
       cursor: pointer;
       outline: none;
+      display: flex;
+      align-items: center;
+
+      &_illustration {
+        height: 15px;
+        width: 15px;
+        border-radius: 50%;
+        background-color: black;
+        margin-right: 10px;
+      }
     }
   }
 }
