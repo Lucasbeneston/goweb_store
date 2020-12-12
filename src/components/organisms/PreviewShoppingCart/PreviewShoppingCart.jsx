@@ -42,7 +42,7 @@ export default function PreviewShoppingCart() {
           <div className="previewShoppingCart_lastItem">
             <img
               className="previewShoppingCart_lastItem_illustration"
-              src={`${process.env.PUBLIC_URL}/assets/${lastItem.image}`}
+              src={`${process.env.PUBLIC_URL}/assets/${lastItem.color.image}`}
               alt="Illustration du manteau"
             />
 
@@ -52,7 +52,7 @@ export default function PreviewShoppingCart() {
                   {lastItem.title}
                 </h2>
                 <h4 className="previewShoppingCart_lastItem_informations_top_color">
-                  {lastItem.color}
+                  {lastItem.color.name}
                 </h4>
               </div>
               <div className="previewShoppingCart_lastItem_informations_bottom">

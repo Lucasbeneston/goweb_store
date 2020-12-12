@@ -19,9 +19,9 @@ export default function ShoppingCart() {
             <ShoppingCartItem
               key={item.id}
               item={item}
-              itemImage={item.image}
+              itemImage={item.color.image}
               itemTitle={item.title}
-              itemColor={item.color}
+              itemColor={item.color.name}
               itemReference={item.reference}
               itemQuantity={item.quantity}
               itemSize={item.size}

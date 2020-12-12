@@ -15,21 +15,25 @@ export default function ItemFormDesktop() {
     id: null,
     title: Items.title,
     price: Items.price,
-    color: null,
+    color: { name: null, image: null },
     size: null,
     quantity: 1,
-    image: Items.images[0],
     reference: Items.reference,
   });
 
   const { color, size, quantity } = selectedValues;
 
   const disabled = () => {
-    if (color !== null && color !== "" && size !== null && size !== "") {
+    if (
+      color.name !== null &&
+      color.name !== "" &&
+      size !== null &&
+      size !== ""
+    ) {
       setIsDisabled(false);
       setSelectedValues({
         ...selectedValues,
-        id: `${selectedValues.size}${selectedValues.quantity}${selectedValues.color}`
+        id: `${selectedValues.size}${selectedValues.quantity}${selectedValues.color.name}`
           .replace(" ", "")
           .toLocaleLowerCase(),
       });
@@ -53,12 +57,15 @@ export default function ItemFormDesktop() {
           onClickOption={(e) => {
             setSelectedValues({
               ...selectedValues,
-              color: e.target.value,
+              color: {
+                name: e.target.value,
+                image: `img-${e.target.value.replace(" ", "_")}.jpg`,
+              },
             });
           }}
           id="selectColor"
           label="Couleur"
-          selectedOption={color || "Choix couleur"}
+          selectedOption={color.name || "Choix couleur"}
           defaultOption="Choix couleur"
           array={Items.colors}
         />
