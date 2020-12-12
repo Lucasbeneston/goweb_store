@@ -1,0 +1,108 @@
+@import "../../_settings/mixins";
+@import "../../_settings/variables";
+
+.moreItems {
+  padding: 0 5%;
+  margin: 20px 0;
+  width: 100%;
+
+  @include media(tablet) {
+    padding: 0 15%;
+  }
+
+  &_top {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $white;
+    background-color: $grey;
+
+    @include media(tablet) {
+      padding: 0 20px;
+      justify-content: space-between;
+    }
+
+    &_buttons {
+      display: none;
+
+      @include media(tablet) {
+        display: flex;
+
+        & button {
+          background-color: transparent;
+          border: none;
+          color: $white;
+          font-size: 1.2rem;
+          outline: none;
+        }
+
+        &_line {
+          height: 100%;
+          border-right: 1px solid $white;
+          margin: 0 10px;
+        }
+      }
+    }
+  }
+
+  &_listItems {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+
+    // &_item {
+    //   border: 1px solid $light-grey;
+    //   padding: 20px;
+    //   margin: 10px 0;
+    //   display: flex;
+    //   flex-direction: column;
+    //   align-items: center;
+    //   position: relative;
+
+    //   &_price {
+    //     position: absolute;
+    //     top: 20px;
+    //     right: 0;
+    //     color: $white;
+    //     padding: 5px 20px;
+    //     text-transform: uppercase;
+    //     background-color: $grey;
+    //     text-align: right;
+
+    //     &_HT {
+    //       font-size: 1.6rem;
+    //     }
+
+    //     &_TTC {
+    //       font-size: 1.2rem;
+    //     }
+    //   }
+
+    //   &_image {
+    //     width: 70%;
+    //     margin-bottom: 20px;
+    //   }
+
+    //   &_title {
+    //     margin-bottom: 20px;
+    //     font-weight: bolder;
+    //     color: $grey;
+    //     text-align: center;
+    //     width: 100%;
+    //   }
+
+    //   &_addButton {
+    //     height: 50px;
+    //     border: none;
+    //     background-color: $grey;
+    //     color: $white;
+    //     font-size: 1.2rem;
+    //     text-transform: uppercase;
+    //     width: 100%;
+    //   }
+    // }
+  }
+}
