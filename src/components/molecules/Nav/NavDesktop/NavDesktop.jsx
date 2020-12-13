@@ -24,7 +24,7 @@ export default function NavDesktop({ itemCount }) {
             </div>
           </Link>
           <Link to="/cart" className="navDesktop_top_cartButton" type="button">
-            > Panier
+            Panier
             <span className="navDesktop_top_cartButton_cartCount">
               ({itemCount})
             </span>

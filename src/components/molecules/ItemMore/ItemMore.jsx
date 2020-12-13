@@ -15,12 +15,14 @@ export default function ItemMore({
         <h5 className="itemMore_price_HT">{itemPriceHT} € HT</h5>
         <h5 className="itemMore_price_TTC">{itemPriceTTC} € TTC</h5>
       </div>
-      <img
-        className="itemMore_image"
-        src={`${process.env.PUBLIC_URL}/assets/${itemImage}`}
-        alt="Illustration du produit"
-      />
-      <h4 className="itemMore_title">{itemTitle}</h4>
+      <div className="itemMore_top">
+        <img
+          className="itemMore_top_image"
+          src={`${process.env.PUBLIC_URL}/assets/${itemImage}`}
+          alt="Illustration du produit"
+        />
+        <h4 className="itemMore_top_title">{itemTitle}</h4>
+      </div>
       <button className="itemMore_addButton" type="button">
         Ajouter au panier
       </button>
