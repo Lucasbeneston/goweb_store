@@ -1,15 +1,16 @@
 @import "../../_settings/variables";
-// @import "../../_settings/mixins";
+@import "../../_settings/mixins";
 
 .banner {
   height: fit-content;
-  padding: 10px 0;
+  padding: 10px 15%;
   background-color: $goweb-red;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   opacity: 1;
+  position: relative;
 
   &.hidden {
     display: none;
@@ -21,17 +22,23 @@
     color: $white;
     text-transform: uppercase;
     line-height: 1.6;
-    margin-left: 15%;
     text-align: center;
   }
 
   &_close {
     font-size: 1rem;
-    width: 15%;
     color: $white;
     background-color: transparent;
     border: none;
     cursor: pointer;
     outline: none;
+    position: absolute;
+    right: 5%;
+    width: 14px;
+    height: 14px;
+
+    @include media(tablet) {
+      right: 15%;
+    }
   }
 }

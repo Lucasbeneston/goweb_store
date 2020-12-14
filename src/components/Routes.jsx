@@ -9,7 +9,7 @@ export default function Routes() {
   return (
     <Switch>
       <Route exact path="/" component={Item} />
-      <Route exact path="/cart" component={ShoppingCart} />
+      <Route exact path="/panier" component={ShoppingCart} />
       <Route path="*" component={NoMatch} />
     </Switch>
   );

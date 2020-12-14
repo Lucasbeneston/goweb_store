@@ -20,6 +20,7 @@
     background-color: $grey;
 
     @include media(tablet) {
+      height: 50px;
       padding: 0 20px;
       justify-content: space-between;
     }
@@ -36,6 +37,7 @@
           color: $white;
           font-size: 1.2rem;
           outline: none;
+          cursor: pointer;
         }
 
         &_line {

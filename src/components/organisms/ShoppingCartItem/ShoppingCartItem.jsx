@@ -53,7 +53,7 @@ export default function ShoppingCartItem({
             {itemSize}
           </h4>
           <h3 className="shoppingCartItem_informations_bottom_price">
-            {itemPrice}.00€
+            {itemQuantity * itemPrice}.00€
           </h3>
         </div>
       </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import PropTypes from "prop-types";
 import {
@@ -15,42 +15,46 @@ export default function NavDesktop({ itemCount }) {
     <>
       <div className="navDesktop">
         <div className="navDesktop_top">
-          <Link to="/">
+          <HashLink to="/#">
             <div className="navDesktop_top_logo">
               <img
                 src={`${process.env.PUBLIC_URL}/assets/logoSVGgoweb.png`}
-                alt="Illustration du manteau"
+                alt="Logo de l'agence Goweb"
               />
             </div>
-          </Link>
-          <Link to="/cart" className="navDesktop_top_cartButton" type="button">
+          </HashLink>
+          <HashLink
+            to="/panier#"
+            className="navDesktop_top_cartButton"
+            type="button"
+          >
             Panier
             <span className="navDesktop_top_cartButton_cartCount">
               ({itemCount})
             </span>
-          </Link>
+          </HashLink>
         </div>
         <div className="navDesktop_bottom">
           <div className="navDesktop_bottom_menu">
-            <Link to="/">Home</Link>
-            <Link to="/homme">
+            <HashLink to="/#">Home</HashLink>
+            <HashLink to="/homme#">
               Homme <FontAwesomeIcon icon={faCaretDown} />
-            </Link>
-            <Link to="/femme">
+            </HashLink>
+            <HashLink to="/femme#">
               Femme <FontAwesomeIcon icon={faCaretDown} />
-            </Link>
-            <Link to="/maison">Maison</Link>
-            <Link to="/jardin">Jardin</Link>
-            <Link to="/blog">Blog</Link>
+            </HashLink>
+            <HashLink to="/maison#">Maison</HashLink>
+            <HashLink to="/jardin#">Jardin</HashLink>
+            <HashLink to="/blog#">Blog</HashLink>
           </div>
           <div className="navDesktop_bottom_likeSearch">
-            <Link
-              to="/favoris"
+            <HashLink
+              to="/favoris#"
               className="navDesktop_bottom_likeSearch_button"
               type="button"
             >
               <FontAwesomeIcon icon={faHeart} />
-            </Link>
+            </HashLink>
             <div className="navDesktop_bottom_likeSearch_line" />
             <button
               className="navDesktop_bottom_likeSearch_button"

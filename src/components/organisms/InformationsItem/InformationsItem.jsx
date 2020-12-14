@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleLeft } from "@fortawesome/free-solid-svg-icons";
 import Items from "../../../data/items";
@@ -17,12 +17,12 @@ export default function InformationsItem() {
 
   return (
     <section className="informationsItem">
-      <Link to="/">
+      <HashLink to="/#">
         <div className="informationsItem_return">
           <FontAwesomeIcon icon={faAngleLeft} />
           <span>Retour</span>
         </div>
-      </Link>
+      </HashLink>
       <div className="informationsItem_title">
         <h2>{Items.title}</h2>
         <div

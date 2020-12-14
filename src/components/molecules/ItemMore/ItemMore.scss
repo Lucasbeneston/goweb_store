@@ -70,5 +70,10 @@
     text-transform: uppercase;
     width: 100%;
     outline: none;
+    cursor: pointer;
+
+    @include media(tablet) {
+      height: 40px;
+    }
   }
 }

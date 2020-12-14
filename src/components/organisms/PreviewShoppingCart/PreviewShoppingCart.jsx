@@ -1,5 +1,6 @@
 import React, { useContext, useState, useEffect, useRef } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import { CartContext } from "../../../contexts/CartContext/CartContext";
 import "./PreviewShoppingCart.scss";
 
@@ -30,7 +31,7 @@ export default function PreviewShoppingCart() {
   return (
     <div
       className={`previewShoppingCart ${
-        isDisabled || location.pathname === "/cart" ? "disabled" : null
+        isDisabled || location.pathname === "/panier" ? "disabled" : null
       }`}
     >
       {Object.keys(cartItems).length === 0 ? (
@@ -68,9 +69,9 @@ export default function PreviewShoppingCart() {
           <div className="previewShoppingCart_otherItemsCount">
             <h3>{itemCount - lastItem.quantity} articles en plus</h3>
           </div>
-          <Link to="/cart">
+          <HashLink to="/panier#">
             <div className="previewShoppingCart_button">Voir le panier</div>
-          </Link>
+          </HashLink>
         </>
       )}
     </div>

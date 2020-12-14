@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleLeft } from "@fortawesome/free-solid-svg-icons";
 
@@ -14,12 +14,12 @@ export default function CarrouselImages() {
 
   return (
     <>
-      <Link to="/">
+      <HashLink to="/#">
         <div className="carouselImages_return">
           <FontAwesomeIcon icon={faAngleLeft} />
           <span>Retour</span>
         </div>
-      </Link>
+      </HashLink>
       <div className="carouselImages_illustration">
         <img
           src={`${process.env.PUBLIC_URL}/${selectedImage}`}

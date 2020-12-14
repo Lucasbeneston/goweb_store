@@ -20,12 +20,13 @@ export default function MoreItems() {
       <div className="moreItems_listItems">
         {MoreItemsArray.map((item) => (
           <ItemMore
+            key={item.id}
             itemPriceHT={item.priceHT}
             itemPriceTTC={item.priceTTC}
             itemImage={item.image}
             itemTitle={item.title}
           />
-        ))}
+        )).slice(0, 4)}
       </div>
     </div>
   );

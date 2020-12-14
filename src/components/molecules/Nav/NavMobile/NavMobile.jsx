@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import PropTypes from "prop-types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -36,49 +36,57 @@ export default function NavMobile({ itemCount }) {
             )}
           </div>
         </button>
-        <Link to="/">
+        <HashLink to="/#">
           <div className="navMobile_logo">
             <img
               src={`${process.env.PUBLIC_URL}/assets/logoSVGgoweb.png`}
               alt="Illustration du manteau"
             />
           </div>
-        </Link>
+        </HashLink>
       </div>
 
       <div className="navMobile_right">
-        <Link to="/favoris" className="navMobile_right_button" type="button">
+        <HashLink
+          to="/favoris#"
+          className="navMobile_right_button"
+          type="button"
+        >
           <FontAwesomeIcon icon={faHeart} />
-        </Link>
+        </HashLink>
         <button className="navMobile_right_button" type="button">
           <FontAwesomeIcon icon={faSearch} />
         </button>
 
-        <Link to="/cart" className="navMobile_right_button" type="button">
+        <HashLink
+          to="/panier#"
+          className="navMobile_right_button"
+          type="button"
+        >
           <FontAwesomeIcon icon={faShoppingBag} />
           <span className="navMobile_right_button_cartCount">{itemCount}</span>
-        </Link>
+        </HashLink>
       </div>
 
       <div className={`navMobile_menu ${isOpen ? "open" : null}`}>
-        <Link to="/" onClick={clickOpenClose}>
+        <HashLink to="/#" onClick={clickOpenClose}>
           Home
-        </Link>
-        <Link to="/homme" onClick={clickOpenClose}>
+        </HashLink>
+        <HashLink to="/homme#" onClick={clickOpenClose}>
           Homme <FontAwesomeIcon icon={faCaretDown} />
-        </Link>
-        <Link to="/femme" onClick={clickOpenClose}>
+        </HashLink>
+        <HashLink to="/femme#" onClick={clickOpenClose}>
           Femme <FontAwesomeIcon icon={faCaretDown} />
-        </Link>
-        <Link to="/maison" onClick={clickOpenClose}>
+        </HashLink>
+        <HashLink to="/maison#" onClick={clickOpenClose}>
           Maison
-        </Link>
-        <Link to="/jardin" onClick={clickOpenClose}>
+        </HashLink>
+        <HashLink to="/jardin#" onClick={clickOpenClose}>
           Jardin
-        </Link>
-        <Link to="/blog" onClick={clickOpenClose}>
+        </HashLink>
+        <HashLink to="/blog#" onClick={clickOpenClose}>
           Blog
-        </Link>
+        </HashLink>
       </div>
     </>
   );
