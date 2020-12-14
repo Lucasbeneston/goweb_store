@@ -23,7 +23,7 @@ export default function CarrouselImages() {
       <div className="carouselImages_illustration">
         <img
           src={`${process.env.PUBLIC_URL}/${selectedImage}`}
-          alt="Illustration du manteau"
+          alt="Illustration du vêtement selectionné"
         />
       </div>
       <div className="carouselImages_miniatures">
@@ -47,7 +47,7 @@ export default function CarrouselImages() {
             >
               <img
                 src={`${process.env.PUBLIC_URL}/assets/${image}`}
-                alt="Illustration du manteau"
+                alt="Illustration du vêtement"
               />
             </div>
           ))

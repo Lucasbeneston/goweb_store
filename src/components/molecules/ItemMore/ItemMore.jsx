@@ -19,7 +19,7 @@ export default function ItemMore({
         <img
           className="itemMore_top_image"
           src={`${process.env.PUBLIC_URL}/assets/${itemImage}`}
-          alt="Illustration du produit"
+          alt={`Illustration du produit : ${itemTitle}`}
         />
         <h4 className="itemMore_top_title">{itemTitle}</h4>
       </div>

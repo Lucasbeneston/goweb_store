@@ -40,7 +40,7 @@ export default function NavMobile({ itemCount }) {
           <div className="navMobile_logo">
             <img
               src={`${process.env.PUBLIC_URL}/assets/logoSVGgoweb.png`}
-              alt="Illustration du manteau"
+              alt="Logo de l'agence Goweb"
             />
           </div>
         </HashLink>

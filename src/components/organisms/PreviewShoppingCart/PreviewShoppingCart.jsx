@@ -44,7 +44,7 @@ export default function PreviewShoppingCart() {
             <img
               className="previewShoppingCart_lastItem_illustration"
               src={`${process.env.PUBLIC_URL}/assets/${lastItem.color.image}`}
-              alt="Illustration du manteau"
+              alt="Illustration du vêtement ajouté au panier"
             />
 
             <div className="previewShoppingCart_lastItem_informations">
