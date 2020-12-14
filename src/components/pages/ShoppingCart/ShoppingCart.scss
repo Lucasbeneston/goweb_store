@@ -34,12 +34,20 @@
     width: 100%;
     height: 40px;
     background-color: $black;
+    border: 1px solid $black;
     color: $white;
     text-transform: uppercase;
     font-weight: lighter;
-    border: none;
     outline: none;
     cursor: pointer;
     margin-bottom: 5%;
+    transition: 0.25s ease-in-out;
+
+    &:hover {
+      background-color: $off-white;
+      color: $black;
+      border: 1px solid $black;
+      transition: 0.25s ease-in-out;
+    }
   }
 }

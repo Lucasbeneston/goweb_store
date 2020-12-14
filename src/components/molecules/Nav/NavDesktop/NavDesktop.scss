@@ -33,12 +33,12 @@
       justify-content: center;
       text-transform: uppercase;
       font-size: 1.2rem;
-      transition: 0.5s ease-in-out;
+      transition: 0.25s ease-in-out;
 
       &:hover {
         background-color: $anthracite-grey;
         color: $off-white;
-        transition: 0.5s ease-in-out;
+        transition: 0.25s ease-in-out;
       }
 
       &_cartCount {

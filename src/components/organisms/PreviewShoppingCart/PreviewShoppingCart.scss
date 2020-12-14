@@ -98,5 +98,12 @@
     justify-content: center;
     text-transform: uppercase;
     font-weight: bolder;
+    transition: 0.25s ease-in-out;
+
+    &:hover {
+      background-color: $anthracite-grey;
+      color: $off-white;
+      transition: 0.25s ease-in-out;
+    }
   }
 }
