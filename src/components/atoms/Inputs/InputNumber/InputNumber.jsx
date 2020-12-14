@@ -24,6 +24,7 @@ export default function InputNumber({
             className="inputNumber_value_arrows_button"
             tabIndex={0}
             role="button"
+            aria-label="Augmenter la quantité de l'article"
             onClick={onClickIncrease}
             onKeyDown={onClickIncrease}
           >
@@ -34,6 +35,7 @@ export default function InputNumber({
             className="inputNumber_value_arrows_button"
             tabIndex={0}
             role="button"
+            aria-label="Diminuer la quantité de l'article"
             onClick={onClickDecrease}
             onKeyDown={onClickDecrease}
           >

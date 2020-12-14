@@ -26,12 +26,20 @@
     &_cartButton {
       height: 40px;
       border: 1px solid $black;
+      background-color: $off-white;
       padding: 0 30px;
       display: flex;
       align-items: center;
       justify-content: center;
       text-transform: uppercase;
       font-size: 1.2rem;
+      transition: 0.5s ease-in-out;
+
+      &:hover {
+        background-color: $anthracite-grey;
+        color: $off-white;
+        transition: 0.5s ease-in-out;
+      }
 
       &_cartCount {
         margin-left: 5px;

@@ -120,6 +120,7 @@ export default function ItemFormDesktop() {
             isDisabled ? "disabled" : null
           }`}
           type="button"
+          aria-label="Ajouter au panier"
           disabled={isDisabled}
         >
           Ajouter au panier
@@ -127,6 +128,7 @@ export default function ItemFormDesktop() {
         <button
           className="itemFormDesktop_buttons_buttonAddFavorite"
           type="button"
+          aria-label="Ajouter aux favoris"
         >
           Ajouter aux favoris
         </button>

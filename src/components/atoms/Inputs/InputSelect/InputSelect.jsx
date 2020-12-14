@@ -24,6 +24,7 @@ export default function InputSelect({
         className="inputSelect_select"
         tabIndex={0}
         role="button"
+        aria-label={defaultOption}
         onClick={onClickEvent}
         onKeyDown={onClickEvent}
         type="select"
@@ -43,6 +44,7 @@ export default function InputSelect({
           className="inputSelect_optionsContainer_option"
           onClick={onClickOption}
           type="button"
+          aria-label={defaultOption}
           value={null}
         >
           -- {defaultOption} --
@@ -52,6 +54,7 @@ export default function InputSelect({
             className="inputSelect_optionsContainer_option"
             onClick={onClickOption}
             type="button"
+            aria-label={option}
             value={option}
             key={option}
           >

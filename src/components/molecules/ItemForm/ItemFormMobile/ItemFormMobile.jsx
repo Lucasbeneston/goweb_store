@@ -96,6 +96,7 @@ export default function ItemFormMobile() {
             isDisabled ? "disabled" : null
           }`}
           type="button"
+          aria-label="Ajouter au panier"
           disabled={isDisabled}
         >
           Ajouter au panier

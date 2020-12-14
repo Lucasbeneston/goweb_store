@@ -36,7 +36,7 @@ export default function NavMobile({ itemCount }) {
             )}
           </div>
         </button>
-        <HashLink to="/#">
+        <HashLink to="/#" aria-label="Aller à la page d'accueil">
           <div className="navMobile_logo">
             <img
               src={`${process.env.PUBLIC_URL}/assets/logoSVGgoweb.png`}
@@ -51,10 +51,15 @@ export default function NavMobile({ itemCount }) {
           to="/favoris#"
           className="navMobile_right_button"
           type="button"
+          aria-label="Aller aux favoris"
         >
           <FontAwesomeIcon icon={faHeart} />
         </HashLink>
-        <button className="navMobile_right_button" type="button">
+        <button
+          className="navMobile_right_button"
+          type="button"
+          aria-label="Rechercher des articles"
+        >
           <FontAwesomeIcon icon={faSearch} />
         </button>
 
@@ -62,6 +67,7 @@ export default function NavMobile({ itemCount }) {
           to="/panier#"
           className="navMobile_right_button"
           type="button"
+          aria-label="Aller sur la page panier"
         >
           <FontAwesomeIcon icon={faShoppingBag} />
           <span className="navMobile_right_button_cartCount">{itemCount}</span>
@@ -69,22 +75,46 @@ export default function NavMobile({ itemCount }) {
       </div>
 
       <div className={`navMobile_menu ${isOpen ? "open" : null}`}>
-        <HashLink to="/#" onClick={clickOpenClose}>
+        <HashLink
+          to="/#"
+          aria-label="Aller à la page d'acceuil"
+          onClick={clickOpenClose}
+        >
           Home
         </HashLink>
-        <HashLink to="/homme#" onClick={clickOpenClose}>
+        <HashLink
+          to="/homme#"
+          aria-label="Aller à la section Homme"
+          onClick={clickOpenClose}
+        >
           Homme <FontAwesomeIcon icon={faCaretDown} />
         </HashLink>
-        <HashLink to="/femme#" onClick={clickOpenClose}>
+        <HashLink
+          to="/femme#"
+          aria-label="Aller à la section Femme"
+          onClick={clickOpenClose}
+        >
           Femme <FontAwesomeIcon icon={faCaretDown} />
         </HashLink>
-        <HashLink to="/maison#" onClick={clickOpenClose}>
+        <HashLink
+          to="/maison#"
+          aria-label="Aller à la section Maison"
+          onClick={clickOpenClose}
+        >
           Maison
         </HashLink>
-        <HashLink to="/jardin#" onClick={clickOpenClose}>
+        <HashLink
+          to="/jardin#"
+          aria-label="Aller à la section Jardin"
+          onClick={clickOpenClose}
+        >
           Jardin
         </HashLink>
-        <HashLink to="/blog#" onClick={clickOpenClose}>
+        <HashLink
+          to="/blog#"
+          aria-label="Aller à la section Blog"
+          onClick={clickOpenClose}
+        >
           Blog
         </HashLink>
       </div>

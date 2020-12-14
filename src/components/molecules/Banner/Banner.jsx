@@ -39,6 +39,7 @@ export default function Banner() {
       <button
         className="banner_close"
         type="button"
+        aria-label="Fermer la bannier"
         onClick={addToLocalStorage}
       >
         <FontAwesomeIcon icon={faTimes} />

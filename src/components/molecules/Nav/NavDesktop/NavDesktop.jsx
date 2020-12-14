@@ -15,7 +15,7 @@ export default function NavDesktop({ itemCount }) {
     <>
       <div className="navDesktop">
         <div className="navDesktop_top">
-          <HashLink to="/#">
+          <HashLink to="/#" aria-label="Aller à la page d'accueil">
             <div className="navDesktop_top_logo">
               <img
                 src={`${process.env.PUBLIC_URL}/assets/logoSVGgoweb.png`}
@@ -27,6 +27,7 @@ export default function NavDesktop({ itemCount }) {
             to="/panier#"
             className="navDesktop_top_cartButton"
             type="button"
+            aria-label="Aller sur la page panier"
           >
             Panier
             <span className="navDesktop_top_cartButton_cartCount">
@@ -36,22 +37,31 @@ export default function NavDesktop({ itemCount }) {
         </div>
         <div className="navDesktop_bottom">
           <div className="navDesktop_bottom_menu">
-            <HashLink to="/#">Home</HashLink>
-            <HashLink to="/homme#">
+            <HashLink to="/#" aria-label="Aller à la page d'accueil">
+              Home
+            </HashLink>
+            <HashLink to="/homme#" aria-label="Aller dans la section Homme">
               Homme <FontAwesomeIcon icon={faCaretDown} />
             </HashLink>
-            <HashLink to="/femme#">
+            <HashLink to="/femme#" aria-label="Aller dans la section Femme">
               Femme <FontAwesomeIcon icon={faCaretDown} />
             </HashLink>
-            <HashLink to="/maison#">Maison</HashLink>
-            <HashLink to="/jardin#">Jardin</HashLink>
-            <HashLink to="/blog#">Blog</HashLink>
+            <HashLink to="/maison#" aria-label="Aller dans la section Maison">
+              Maison
+            </HashLink>
+            <HashLink to="/jardin#" aria-label="Aller dans la section Jardon">
+              Jardin
+            </HashLink>
+            <HashLink to="/blog#" aria-label="Aller dans la section Blog">
+              Blog
+            </HashLink>
           </div>
           <div className="navDesktop_bottom_likeSearch">
             <HashLink
               to="/favoris#"
               className="navDesktop_bottom_likeSearch_button"
               type="button"
+              aria-label="Aller aux favoris"
             >
               <FontAwesomeIcon icon={faHeart} />
             </HashLink>
@@ -59,6 +69,7 @@ export default function NavDesktop({ itemCount }) {
             <button
               className="navDesktop_bottom_likeSearch_button"
               type="button"
+              aria-label="Rechercher des articles"
             >
               <FontAwesomeIcon icon={faSearch} />
             </button>

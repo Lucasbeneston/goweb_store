@@ -28,6 +28,7 @@ export default function ShoppingCartItem({
           className="shoppingCartItem_informations_removeItem"
           tabIndex={0}
           role="button"
+          aria-label={`Supprimer l'article ${itemTitle}`}
           onClick={() => {
             removeItem(item);
           }}

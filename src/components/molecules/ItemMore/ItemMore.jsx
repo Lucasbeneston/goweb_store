@@ -13,7 +13,7 @@ export default function ItemMore({
     <div className="itemMore">
       <div className="itemMore_price">
         <h5 className="itemMore_price_HT">{itemPriceHT} € HT</h5>
-        <h5 className="itemMore_price_TTC">{itemPriceTTC} € TTC</h5>
+        <h6 className="itemMore_price_TTC">{itemPriceTTC} € TTC</h6>
       </div>
       <div className="itemMore_top">
         <img
@@ -23,7 +23,11 @@ export default function ItemMore({
         />
         <h4 className="itemMore_top_title">{itemTitle}</h4>
       </div>
-      <button className="itemMore_addButton" type="button">
+      <button
+        className="itemMore_addButton"
+        type="button"
+        aria-label="Ajouter au panier"
+      >
         Ajouter au panier
       </button>
     </div>

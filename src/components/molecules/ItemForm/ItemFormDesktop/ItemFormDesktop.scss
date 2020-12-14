@@ -23,10 +23,23 @@
       outline: none;
       font-size: 1.2rem;
       cursor: pointer;
+      border: 1px solid $grey;
+      transition: 0.5s ease-in-out;
 
       &.disabled {
         background-color: darkgray;
+        border: 1px solid darkgray;
         cursor: not-allowed;
+        transition: 0.5s ease-in-out;
+      }
+
+      &:not(.disabled) {
+        &:hover {
+          background-color: $off-white;
+          color: $anthracite-grey;
+          border: 1px solid $grey;
+          transition: 0.5s ease-in-out;
+        }
       }
     }
 
@@ -41,6 +54,13 @@
       border: 1px solid $light-grey;
       font-size: 1.2rem;
       cursor: pointer;
+      transition: 0.5s ease-in-out;
+
+      &:hover {
+        border: 1px solid $grey;
+        color: $anthracite-grey;
+        transition: 0.5s ease-in-out;
+      }
     }
   }
 }
