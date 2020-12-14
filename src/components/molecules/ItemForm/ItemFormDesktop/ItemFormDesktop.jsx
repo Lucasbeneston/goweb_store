@@ -62,6 +62,7 @@ export default function ItemFormDesktop() {
                 image: `img-${e.target.value.replace(" ", "_")}.jpg`,
               },
             });
+            setIsOpen({ ...isOpen, openColor: !isOpen.openColor });
           }}
           id="selectColor"
           label="Couleur"
@@ -80,6 +81,7 @@ export default function ItemFormDesktop() {
               ...selectedValues,
               size: e.target.value,
             });
+            setIsOpen({ ...isOpen, openSize: !isOpen.openSize });
           }}
           id="selectSize"
           label="Taille"
