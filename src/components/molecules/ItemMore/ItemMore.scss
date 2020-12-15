@@ -63,7 +63,6 @@
 
   &_addButton {
     height: 35px;
-    border: none;
     background-color: $grey;
     color: $white;
     font-size: 1.2rem;
@@ -71,6 +70,15 @@
     width: 100%;
     outline: none;
     cursor: pointer;
+    border: 1px solid $light-grey;
+    transition: 0.25s ease-in-out;
+
+    &:hover {
+      border: 1px solid $grey;
+      color: $anthracite-grey;
+      background-color: $off-white;
+      transition: 0.25s ease-in-out;
+    }
 
     @include media(tablet) {
       height: 40px;
