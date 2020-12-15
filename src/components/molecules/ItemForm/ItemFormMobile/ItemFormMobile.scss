@@ -17,6 +17,7 @@
       transition: 0.25s ease-in-out;
 
       &.disabled {
+        border: 1px solid darkgray;
         background-color: darkgray;
         cursor: not-allowed;
         transition: 0.25s ease-in-out;
