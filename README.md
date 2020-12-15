@@ -118,3 +118,5 @@ Dans un terminal, exécuter ces lignes :
 --- **Index.jsx** : _Fichier qui fait le lien entre "App.jsx" et "index.html"_
 
 ## Illustrations
+
+![Illustration du projet](https://github.com/Lucasbeneston/goweb_store/blob/master/public/assets/project_illustration.jpg)
