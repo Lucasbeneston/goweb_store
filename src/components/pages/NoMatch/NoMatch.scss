@@ -1,19 +1,13 @@
 @import "../../_settings/variables";
-@import "../../_settings/mixins";
 
 .noMatch {
   width: 100%;
   padding: 10%;
-  min-height: calc(100vh - 50px);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   transition: width 0.5s ease-in-out;
-
-  @include media(tablet) {
-    min-height: calc(100vh - 120px);
-  }
 
   &_oops {
     font-size: 4rem;

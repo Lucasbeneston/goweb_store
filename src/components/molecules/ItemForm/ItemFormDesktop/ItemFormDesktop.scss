@@ -17,7 +17,7 @@
       width: 47.5%;
       height: 45px;
       background-color: $grey;
-      color: white;
+      color: $white;
       border: none;
       text-transform: uppercase;
       outline: none;
@@ -27,8 +27,8 @@
       transition: 0.25s ease-in-out;
 
       &.disabled {
-        background-color: darkgray;
-        border: 1px solid darkgray;
+        background-color: $middle-grey;
+        border: 1px solid $middle-grey;
         cursor: not-allowed;
         transition: 0.25s ease-in-out;
       }
