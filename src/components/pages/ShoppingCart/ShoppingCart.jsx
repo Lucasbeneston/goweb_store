@@ -14,29 +14,28 @@ export default function ShoppingCart() {
       {Object.keys(cartItems).length === 0 ? (
         <p className="shoppingCart_emptyCart">Votre panier est vide.</p>
       ) : (
-        <>
-          {cartItems.map((item) => (
-            <ShoppingCartItem
-              key={item.id}
-              item={item}
-              itemImage={item.color.image}
-              itemTitle={item.title}
-              itemColor={item.color.name}
-              itemReference={item.reference}
-              itemQuantity={item.quantity}
-              itemSize={item.size}
-              itemPrice={item.price}
-            />
-          ))}
+        <div className="shoppingCart_details">
+          <div className="shoppingCart_details_items">
+            {cartItems.map((item) => (
+              <ShoppingCartItem
+                key={item.id}
+                item={item}
+                itemImage={item.color.image}
+                itemTitle={item.title}
+                itemColor={item.color.name}
+                itemReference={item.reference}
+                itemQuantity={item.quantity}
+                itemSize={item.size}
+                itemPrice={item.price}
+              />
+            ))}
+          </div>
+
           <ShoppingCartTotal
             itemTotalValue={itemTotalValue}
             itemCount={itemCount}
           />
-
-          <button className="shoppingCart_buttonNext" type="button">
-            Continuer
-          </button>
-        </>
+        </div>
       )}
     </div>
   );
