@@ -5,6 +5,7 @@ import HeaderContext from "./HeaderContext";
 export default function HeaderContextProvider({ children }) {
   const [headerHeight, setHeaderHeight] = useState();
 
+  // When the page loads, the header context default value is the value of the header height
   useEffect(() => {
     setHeaderHeight(document.querySelector(".header").offsetHeight);
   }, []);

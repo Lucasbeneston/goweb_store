@@ -1,5 +1,5 @@
 import React, { useContext, useState, useEffect } from "react";
-import Items from "../../../../data/items";
+import Item from "../../../../data/item";
 import { CartContext } from "../../../../contexts/CartContext/CartContext";
 import InputSelect from "../../../atoms/Inputs/InputSelect/InputSelect";
 import InputNumber from "../../../atoms/Inputs/InputNumber/InputNumber";
@@ -7,22 +7,29 @@ import InputNumber from "../../../atoms/Inputs/InputNumber/InputNumber";
 import "./ItemFormDesktop.scss";
 
 export default function ItemFormDesktop() {
+  // Recover and storage the action "addItem" from the context in "addItem" constant
   const { addItem } = useContext(CartContext);
 
+  // By default the inputs color and size menu is close
   const [isOpen, setIsOpen] = useState({ openColor: false, openSize: false });
+
+  // By default the button is disable
   const [isDisabled, setIsDisabled] = useState(true);
+
+  // The new item values with default values "null" for id, color, size and "1" for quantity
   const [selectedValues, setSelectedValues] = useState({
     id: null,
-    title: Items.title,
-    price: Items.price,
+    title: Item.title,
+    price: Item.price,
     color: { name: null, image: null },
     size: null,
     quantity: 1,
-    reference: Items.reference,
+    reference: Item.reference,
   });
 
   const { color, size, quantity } = selectedValues;
 
+  // The button is enabled if color and size are selected
   const disabled = () => {
     if (
       color.name !== null &&
@@ -31,6 +38,7 @@ export default function ItemFormDesktop() {
       size !== ""
     ) {
       setIsDisabled(false);
+      // Creation of id with the size, quantity and color
       setSelectedValues({
         ...selectedValues,
         id: `${selectedValues.size}${selectedValues.quantity}${selectedValues.color.name}`
@@ -42,6 +50,7 @@ export default function ItemFormDesktop() {
     }
   };
 
+  // Call the disabled function when the color, size or quantity change
   useEffect(() => {
     disabled();
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -68,7 +77,7 @@ export default function ItemFormDesktop() {
           label="Couleur"
           selectedOption={color.name || "Choix couleur"}
           defaultOption="Choix couleur"
-          array={Items.colors}
+          array={Item.colors}
         />
 
         <InputSelect
@@ -87,7 +96,7 @@ export default function ItemFormDesktop() {
           label="Taille"
           selectedOption={size || "Choix taille"}
           defaultOption="Choix taille"
-          array={Items.sizes}
+          array={Item.sizes}
         />
 
         <InputNumber

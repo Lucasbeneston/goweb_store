@@ -1,9 +1,20 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import PropTypes from "prop-types";
+import HeaderContext from "../../../contexts/HeaderContext/HeaderContext";
 
 import "./ShoppingCartTotal.scss";
 
 export default function ShoppingCartTotal({ itemTotalValue, itemCount }) {
+  // Recover and storage the header context value in "headerHeight"
+  const context = useContext(HeaderContext);
+  const { headerHeight } = context;
+
+  // Change the shoppingCartTotal top when "headerHeight" context change
+  useEffect(() => {
+    const shoppingCartTotal = document.querySelector(".shoppingCartTotal");
+    shoppingCartTotal.style.top = `${headerHeight}px`;
+  }, [headerHeight]);
+
   return (
     <div className="shoppingCartTotal">
       <h1 className="shoppingCartTotal_title">Panier</h1>

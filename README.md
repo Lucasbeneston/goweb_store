@@ -107,7 +107,7 @@ Dans un terminal, exécuter ces lignes :
 
 &emsp; |--- **/data** : _Tableaux des données (JSON) pour simuler une base de données_
 
-&emsp; &emsp; |--- **items.js** : _Données de l'article "manteau"_
+&emsp; &emsp; |--- **item.js** : _Données de l'article "manteau"_
 
 &emsp; &emsp; |--- **moreItems.js** : _Données des articles en plus_
 

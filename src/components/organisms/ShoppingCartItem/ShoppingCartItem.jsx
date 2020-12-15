@@ -14,6 +14,7 @@ export default function ShoppingCartItem({
   itemSize,
   itemPrice,
 }) {
+  // Recover and storage the action "removeItem" from the context in "removeItem" constant
   const { removeItem } = useContext(CartContext);
 
   return (

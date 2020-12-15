@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { HashLink } from "react-router-hash-link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleLeft } from "@fortawesome/free-solid-svg-icons";
-import Items from "../../../data/items";
+import Item from "../../../data/item";
 import LikeBorder from "../../atoms/SVG/LikeSVG/LikeBorder";
 import LikeFull from "../../atoms/SVG/LikeSVG/LikeFull";
 
@@ -11,6 +11,7 @@ import "./InformationsItem.scss";
 export default function InformationsItem() {
   const [isFavorite, setIsFavorite] = useState(false);
 
+  // Change the state of "isFavorite" when the user click on the button
   const switchFavorite = () => {
     setIsFavorite(!isFavorite);
   };
@@ -24,7 +25,7 @@ export default function InformationsItem() {
         </div>
       </HashLink>
       <div className="informationsItem_title">
-        <h2>{Items.title}</h2>
+        <h2>{Item.title}</h2>
         <div
           className="informationsItem_title_favoriteButton"
           tabIndex={0}
@@ -36,30 +37,30 @@ export default function InformationsItem() {
         </div>
       </div>
 
-      <h3 className="informationsItem_price">{Items.price}.00€</h3>
+      <h3 className="informationsItem_price">{Item.price}.00€</h3>
 
       <div className="informationsItem_logistic">
         <h4>
           Disponibilité :{" "}
           <span
             className={`informationsItem_logistic_${
-              Items.disponibility === "En stock" ? "inStock" : "soldOut"
+              Item.disponibility === "En stock" ? "inStock" : "soldOut"
             }`}
           >
-            {Items.disponibility} &#9679;
+            {Item.disponibility} &#9679;
           </span>
         </h4>
-        <h4>Référence : {Items.reference}</h4>
-        <h4>Tags : {Items.tags.map((tag) => tag).join(", ")}</h4>
+        <h4>Référence : {Item.reference}</h4>
+        <h4>Tags : {Item.tags.map((tag) => tag).join(", ")}</h4>
       </div>
 
-      <p className="informationsItem_description">{Items.description}</p>
+      <p className="informationsItem_description">{Item.description}</p>
 
       <ul className="informationsItem_details">
-        <li>{Items.disponibilityColors}</li>
-        <li>{Items.style}</li>
-        <li>{Items.composition}</li>
-        <li>{Items.delivery}</li>
+        <li>{Item.disponibilityColors}</li>
+        <li>{Item.style}</li>
+        <li>{Item.composition}</li>
+        <li>{Item.delivery}</li>
       </ul>
     </section>
   );

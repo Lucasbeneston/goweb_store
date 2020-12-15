@@ -4,10 +4,12 @@ import { CartReducer, sumItems } from "./CartReducer";
 
 export const CartContext = createContext();
 
+// If the key "cart" does not exist add an empty array, else create an object with values of key "cart"
 const storage = localStorage.getItem("cart")
   ? JSON.parse(localStorage.getItem("cart"))
   : [];
 
+// Create an initial state for the cart context
 const initialState = {
   cartItems: storage,
   ...sumItems(storage),

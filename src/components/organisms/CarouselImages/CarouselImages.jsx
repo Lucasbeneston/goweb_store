@@ -3,13 +3,14 @@ import { HashLink } from "react-router-hash-link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleLeft } from "@fortawesome/free-solid-svg-icons";
 
-import Items from "../../../data/items";
+import Item from "../../../data/item";
 
 import "./CarouselImages.scss";
 
 export default function CarrouselImages() {
+  // By default, the selected image is the first element of the array
   const [selectedImage, setSelectedImage] = useState({
-    src: `assets/${Items.images[0]}`,
+    src: `assets/${Item.images[0]}`,
     index: 0,
   });
 
@@ -28,7 +29,7 @@ export default function CarrouselImages() {
         />
       </div>
       <div className="carouselImages_miniatures">
-        {Items.images
+        {Item.images
           .map((image, index) => (
             <div
               className={`carouselImages_miniatures_img ${

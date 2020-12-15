@@ -5,10 +5,18 @@ import { CartContext } from "../../../contexts/CartContext/CartContext";
 import "./PreviewShoppingCart.scss";
 
 export default function PreviewShoppingCart() {
+  // Recovery and storage the cart context values in different constants
   const { addItem, cartItems, itemCount } = useContext(CartContext);
+
+  // Select the last item added in "cartItems" array
   const [lastItem] = cartItems.slice(-1);
+
+  // By default, the button is disabled
   const [isDisabled, setIsDisabled] = useState(true);
+
   const didMount = useRef(false);
+
+  // Return the location of the component
   const location = useLocation();
 
   useEffect(() => {

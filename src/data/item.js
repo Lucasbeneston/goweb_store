@@ -1,4 +1,4 @@
-const items = {
+const item = {
   id: 1,
   title: "Super manteau pour supporter le froid des Hauts-de-France",
   price: 499.0,
@@ -21,4 +21,4 @@ const items = {
   sizes: ["S", "M", "L", "XL", "XXL"],
 };
 
-export default items;
+export default item;

@@ -14,8 +14,10 @@ import {
 import "./NavMobile.scss";
 
 export default function NavMobile({ itemCount }) {
+  // By default the burger menu is close
   const [isOpen, setIsOpen] = useState(false);
 
+  // Change the value of "isOpen" when the user click on the burger menu
   const clickOpenClose = () => {
     setIsOpen(!isOpen);
   };
