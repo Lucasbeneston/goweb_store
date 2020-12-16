@@ -1,6 +1,8 @@
 # Projet "Goweb store"
 
-Lien du projet : [https://github.com/Lucasbeneston/goweb_store](https://github.com/Lucasbeneston/goweb_store)
+Lien du projet : [https://goweb-store.herokuapp.com/](https://goweb-store.herokuapp.com/)
+
+Lien du repertoire : [https://github.com/Lucasbeneston/goweb_store](https://github.com/Lucasbeneston/goweb_store)
 
 ## Informations générales
 
