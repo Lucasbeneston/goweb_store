@@ -3,7 +3,8 @@
 
 .previewShoppingCart {
   position: absolute;
-  bottom: calc(fit-content);
+  bottom: 0;
+  // bottom: calc(fit-content);
   right: 5%;
   width: 60%;
   height: fit-content;
@@ -16,7 +17,8 @@
   @include media(tablet) {
     right: 15%;
     width: 20%;
-    bottom: calc(fit-content);
+    bottom: 0;
+    // bottom: calc(fit-content);
     margin-top: -52px;
   }
 
