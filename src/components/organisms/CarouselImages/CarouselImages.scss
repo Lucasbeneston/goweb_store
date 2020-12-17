@@ -36,11 +36,12 @@
   &_miniatures {
     width: 100%;
     display: flex;
-    gap: 2.5%;
-    padding: 2.5% 5%;
+    justify-content: space-evenly;
+    padding: 10px 0;
 
     @include media(tablet) {
       padding: 2.5% 0 0;
+      justify-content: space-between;
     }
 
     &_img {
