@@ -36,8 +36,8 @@
   &_miniatures {
     width: 100%;
     display: flex;
-    justify-content: space-evenly;
-    padding: 10px 0;
+    justify-content: space-between;
+    padding: 2.5% 5%;
 
     @include media(tablet) {
       padding: 2.5% 0 0;
@@ -45,7 +45,7 @@
     }
 
     &_img {
-      width: 23%;
+      width: 22.5%;
       background-color: $light-grey;
       cursor: pointer;
       outline: none;
