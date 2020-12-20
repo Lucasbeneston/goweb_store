@@ -17,7 +17,7 @@ const item = {
   delivery: "Livraison gratuite",
   composition: "100% coton",
   disponibilityColors: "Disponible en 4 couleurs",
-  colors: ["Camel", "Noir", "Bleu marine", "Bordeau"],
+  colors: ["Camel", "Noir", "Bleu marine", "Bordeaux"],
   sizes: ["S", "M", "L", "XL", "XXL"],
 };
 
