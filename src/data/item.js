@@ -4,7 +4,7 @@ const item = {
   price: 499.0,
   images: [
     "img-Camel.jpg",
-    "img-Bordeau.jpg",
+    "img-Bordeaux.jpg",
     "img-Bleu_marine.jpg",
     "img-Noir.jpg",
   ],
